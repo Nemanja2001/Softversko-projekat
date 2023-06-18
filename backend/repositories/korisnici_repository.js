@@ -15,7 +15,7 @@ function encrypt_text(pass){
     // Kreiranje chiper algoritma
     const cipher = crypto.createCipheriv(algorithm, secretKey, iv);
 
-    // Enkripcija teksta
+    // Enkripcija teeksta
     let encryptedData = cipher.update(plainText, 'utf8', 'hex');
     encryptedData += cipher.final('hex');
 
@@ -43,19 +43,19 @@ const getUserByEmail = async (email)=>{
     return resluts.rows
 };
 
-const registerUser = async (email, pass)=>{
-    const resluts = await pool.query('Select * From public."Korisnici" where (Email = $1 || Username = $1) and Password = $2',[email, encrypt_text(pass)]);
-    return resluts.rowCount
-};
-
-const insertUser = async (ime, prezime, email, username, password, type)=>{
-    const resluts = await pool.query('Insert into public."Korisnici (Name, Surname, Email, Username, Password, Type) Values ($1,$2,$3,$4,$5,$6)',
-                            [ime, prezime, email, username, encrypt_text(password), type]);
+const registerUser = async (credencials)=>{
+    const resluts = await pool.query('Select * From public."Korisnici" where (Email = $1 || Username = $1) and Password = $2',[credencials.email, encrypt_text(credencials.pass)]);
     return resluts.rows
 };
 
-const updatePass = async (ID, password) => {
-    const results = await pool.query('Update public."Koirsnici" set Password = \'$1\' where ID = $2', [encrypt_text(password),ID]);
+const insertUser = async (user)=>{
+    const resluts = await pool.query('Insert into public."Korisnici (Name, Surname, Email, Username, Password, Type) Values ($1,$2,$3,$4,$5,$6)',
+                            [user.ime, user.prezime, user.email, user.username, encrypt_text(user.password), user.type]);
+    return resluts.rows
+};
+
+const updatePass = async (ID, credencial) => {
+    const results = await pool.query('Update public."Koirsnici" set Password = $1 where ID = $2', [encrypt_text(credencial.password),ID]);
     return results.rows
 } 
 

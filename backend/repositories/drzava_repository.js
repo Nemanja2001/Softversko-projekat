@@ -12,7 +12,7 @@ const getCounrtyByName = async (name)=>{
 }
 
 const insertCountry = async (name)=>{
-    const rezultat = await pool.query('Insert into public."Drzava" ("Ime") Values($1)',[name])
+    const rezultat = await pool.query('Insert into public."Drzava" ("Ime") Values($1)',[name.name])
     return rezultat.rows
 }
 
