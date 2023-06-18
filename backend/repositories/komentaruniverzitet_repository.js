@@ -10,9 +10,9 @@ const getCommentByUniversity = async (UniversityID)=>{
     return resluts.rows
 }
 
-const insertComment = async (UserID, UniversityID, Text, Ocjena)=>{
+const insertComment = async (info)=>{
     const resluts = await pool.query('Insert into public."KomentarUniverzitet" (IDUniverziteta,IDKorisnika, Tekst, Ocjena) Values($1, $2, $3, $4)'
-                                    ,[UniversityID,UserID,Text, Ocjena]);
+                                    ,[info.UniversityID,info.UserID,info.Text, info.Ocjena]);
     return resluts.rows
 }
 
@@ -27,9 +27,9 @@ const getNumOfComments = async (UniversityID)=>{
     return resluts.rows
 }
 
-const updateComment = async (UserID, UniversityID, Text, Ocjena)=>{
+const updateComment = async (info)=>{
     const resluts = await pool.query('Update public."KomentarUniverzitet" set Tekst = $3, Ocjena =$4 where IDKorisnika = $1 and IDUniverziteta= $2 ',
-                                    [UniversityID,UserID,Text, Ocjena]);
+                                    [info.UniversityID,info.UserID,info.Text,info.Ocjena]);
     return resluts.rows
 }
 
