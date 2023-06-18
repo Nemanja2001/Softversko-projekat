@@ -7,7 +7,7 @@ const getAllCountries = async(request, response)=>{
 }
 
 const getCountryByName = async(request, response)=>{
-    const name = request.params.counrtyName
+    const name = request.params.name
     const result = await country_functions.getCounrtyByName(name)
     response.send(result)
 }
