@@ -25,7 +25,7 @@ const insertCountry = async (name) => {
 const updateCountry = async (name, newname) => {
   const result = await pool.query(
     'Update public."Drzava" set "Ime"=$1 where "Ime"=$2',
-    [newname, name]
+    [newname.ime, name]
   );
   res = result.rows;
   return res;
