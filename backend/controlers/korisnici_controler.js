@@ -38,7 +38,7 @@ const updateUserPass = async(request, response)=>{
 const login = async(request, response)=>{
     const email = request.body.email;
     const password = request.body.password;
-    const result = await userfunctions.login(email, password);
+    const result = await userfunctions.registerUser(email, password);
 
     let returnValue = { token: null, msg: "", status: 200 };
 
