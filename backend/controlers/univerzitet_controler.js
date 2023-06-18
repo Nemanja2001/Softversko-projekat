@@ -1,4 +1,4 @@
-const pool = require("./../dbconnection/dbconn")
+const pool=require("./../dbconnection/dbconn");
 const universityfunctions = require("./../repositories/univerzitet_repository")
 
 const getAllUniversities = async(request, response)=>{

@@ -1,4 +1,4 @@
-const pool = require("./../controlers/univerzitet_controler")
+
 const express = require("express")
 const router = express.Router()
 

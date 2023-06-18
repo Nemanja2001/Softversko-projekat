@@ -1,4 +1,4 @@
-const pool=require("./../dbconncetion/dbconn");
+const pool=require("./../dbconnection/dbconn");
 
 
 const getAllUniversities = async ()=>{
