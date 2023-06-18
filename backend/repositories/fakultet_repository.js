@@ -5,11 +5,11 @@ const getAllColleges = async ()=>{
     return results.rows   
 };
 const getCollegeByUniversityID = async (UniversityID)=>{
-    const results =  await pool.query('Select * From public."Fakultet" where ID = $1',[UniversityID])
+    const results =  await pool.query('Select * From public."Fakultet" where IDUniverziteta = $1',[UniversityID])
     return results.rows
 };
-const getCollegeByName = async (CollegeName)=>{
-    const results = await pool.query('Select * From public."Fakultet" where Ime = $1',[CollegeName])
+const getCollegeByName = async (CollegeName,UniversityID)=>{
+    const results = await pool.query('Select * From public."Fakultet" where Ime = $1 and IDUniverziteta = $2',[CollegeName, UniversityID])
     return results.rows
 };
 const insertCollege= async (UniversityID,name)=>{
