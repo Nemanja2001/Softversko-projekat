@@ -14,4 +14,4 @@ router.route('/:uniName')
 router.route('/:UniversityID/coleages')
     .get(facultyrouter.getCollegeByUniversityID)
 
-module.exports = router*/
+module.exports = router
