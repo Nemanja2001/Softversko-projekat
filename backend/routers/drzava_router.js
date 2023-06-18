@@ -8,3 +8,5 @@ router.route('/')
 router.route('/:countryName')
     .get(drzavacontroler.getCountryByName)
     .post(drzavacontroler.updateCountry)
+
+module.exports=router;
