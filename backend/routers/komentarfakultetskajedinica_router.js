@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const KomentFakJedinicaRouter = require("./../controlers/komentarfakultetskajedinica_controler");
+const KomentFakJedinicaControler = require("./../controlers/komentarfakultetskajedinica_controler");
 router
   .route("/")
-  .get(KomentFakJedinicaRouter.getAllFacultyUnitCommentar)
-  .post(KomentFakJedinicaRouter.insertCommentCollegeUnity);
+  .get(KomentFakJedinicaControler.getAllFacultyUnitCommentar)
+  .post(KomentFakJedinicaControler.insertCommentCollegeUnity);
 // router
 //   .route("/:NoOfComment")
 //   .get(KomentFakJedinicaRouter.getNumberOfFacultyUnitComments);
@@ -15,7 +15,7 @@ router
 
 router
   .route("/:UserID")
-  .get(KomentFakJedinicaRouter.getUnityCommentByUserID)
-  .post(KomentFakJedinicaRouter.updateCommentCollegeUnity);
+  .get(KomentFakJedinicaControler.getUnityCommentByUserID)
+  .post(KomentFakJedinicaControler.updateCommentCollegeUnity);
 
 module.exports = router;
