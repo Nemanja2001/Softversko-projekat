@@ -8,12 +8,12 @@ const getCollegeByUniversityID = async (UniversityID)=>{
     const results =  await pool.query('Select * From public."Fakultet" where "IDUniverziteta" = $1',[UniversityID])
     return results.rows
 };
-const getCollegeByName = async (CollegeName,UniversityID)=>{
-    const results = await pool.query('Select * From public."Fakultet" where "Ime" = $1 and "IDUniverziteta"=$2',[CollegeName,UniversityID])
+const getCollegeByName = async (CollegeName,info)=>{
+    const results = await pool.query('Select * From public."Fakultet" where "Ime" = $1 and "IDUniverziteta"=$2',[CollegeName,info.UniversityID])
     return results.rows
 };
-const insertCollege= async (UniversityID,name)=>{
-    const results = await pool.query('Insert into public."Fakultet" ("IDUniverziteta", "Ime") Values ($1,$2)',[UniversityID,name])
+const insertCollege= async (info)=>{
+    const results = await pool.query('Insert into public."Fakultet" ("IDUniverziteta", "Ime") Values ($1,$2)',[info.UniversityID,info.name])
     return results.rows
 };
 
