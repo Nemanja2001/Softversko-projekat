@@ -12,14 +12,11 @@ const getCollegeByUniversityID = async (request,response)=>{
 };
 const getCollegeByName = async (request,response)=>{
     const name=request.params.name
-    const universityID=request.params.UniversityID
-    const result=await facultyfunctions.getCollegeByUniversityID(name,universityID)
+    const result=await facultyfunctions.getCollegeByUniversityID(name,request.body)
     response.send(result)
 };
 const insertCollege = async (request,response)=>{
-    const universityID=request.params.UniversityID
-    const name=request.params.name
-    const result=await facultyfunctions.insertCollege(universityID,name)
+    const result=await facultyfunctions.insertCollege(request.body)
     response.send(result)
 };
 module.exports={
