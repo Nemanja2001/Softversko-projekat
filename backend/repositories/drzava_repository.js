@@ -11,12 +11,12 @@ const getCounrtyByName = async (name)=>{
     return result.rows
 }
 
-const insertCounry = async (name)=>{
+const insertCountry = async (name)=>{
     const rezultat = await pool.query('Insert into public."Drzava" ("Ime") Values($1)',[name])
     return rezultat.rows
 }
 
-const updateCounry = async (name, newname)=>{
+const updateCountry = async (name, newname)=>{
     const result =await pool.query('Update public."Drzava" set "Ime"=$1 where "Ime"=$2', [newname, name])
     res = result.rows
     return res
@@ -25,7 +25,7 @@ const updateCounry = async (name, newname)=>{
 module.exports = {
     getAllCountries,
     getCounrtyByName,
-    insertCounry,
-    updateCounry
+    insertCountry,
+    updateCountry
 }
 
