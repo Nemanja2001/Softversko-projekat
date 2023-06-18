@@ -1,5 +1,3 @@
-const { request, response } = require("express");
-const pool = require("./../dbconnection/dbconn")
 const facultyfunctions = require("./../repositories/fakultet_repository")
 
 const getAllColleges = async(request, response)=>{
