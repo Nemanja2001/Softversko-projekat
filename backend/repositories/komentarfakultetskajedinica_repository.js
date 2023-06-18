@@ -5,44 +5,23 @@ const getAllFacultyUnitCommentar = async (
   nameFac,
   nameFacUnity
 ) => {
-  return await pool.query(
+  const resluts = await pool.query(
     'SELECT Tekst FROM public."FakultetskaJedinicaKomentar" where IDUniverzitet=$1 and ImeFakulteta=$2 and ImeFakultetskeJedinice=$3',
-    [universityId, nameFac, nameFacUnity],
-    (error, results) => {
-      if (error) {
-        console.error("Error executing query", error);
-        return;
-      }
-      return results.rows;
-    }
-  );
+    [universityId, nameFac, nameFacUnity]);
+    return resluts.rows
 };
 
 const getUnityCommentByUserID = async (UserID) => {
-  return await pool.query(
+  const resluts = await pool.query(
     'SELECT Tekst FROM public."FakultetskaJedinicaKomentar" where IDKorisnika = $1',
-    [UserID],
-    (error, results) => {
-      if (error) {
-        console.error("Error executing query", error);
-        return;
-      }
-      return results.rows;
-    }
-  );
+    [UserID]);
+    return resluts.rows
 };
 const getGradeByCollege = async (UniveristyID, CollegeName, nameFacUnity) => {
-  return await pool.query(
+  const resluts = await pool.query(
     'SELECT avg(Ocjena) FROM public."FakultetskaJedinicaKomentar" where IDUniverziteta = $1 and ImeFakulteta=$2 and ImeFakultetskeJedinice=$3',
-    [UniveristyID, CollegeName, nameFacUnity],
-    (error, results) => {
-      if (error) {
-        console.error("Error executing query", error);
-        return;
-      }
-      return results.rows;
-    }
-  );
+    [UniveristyID, CollegeName, nameFacUnity]);
+    return resluts.rows
 };
 
 const insertCommentCollegeUnity = async (
@@ -53,17 +32,10 @@ const insertCommentCollegeUnity = async (
   comment,
   grade
 ) => {
-  return await pool.query(
+  const results = await pool.query(
     'Insert into public."FakultetskaJedinicaKomentar" (IDKorisnika,IDUniverziteta, ImeFakulteta,ImeFakultetskeJedinice, Tekst, Ocjena) Values ($1,$2,$3,$4,$5,$6)',
-    [UserID, UniveristyID, CollegeName, nameFacUnity, comment, grade],
-    (error, results) => {
-      if (error) {
-        console.log("Greška pri unosu komentara za univerzitetske jedinice");
-      }
-
-      return results.rows;
-    }
-  );
+    [UserID, UniveristyID, CollegeName, nameFacUnity, comment, grade]);
+    return results.rows
 };
 
 const updateCommentCollegeUnity = async (
@@ -74,34 +46,20 @@ const updateCommentCollegeUnity = async (
   grade,
   nameFacUnity
 ) => {
-  return await pool.query(
+    const resluts = await pool.query(
     'Update into public."FakultetskaJedinicaKomentar" set Tekst=$1, Ocjena=$2 where IDUniverziteta=$3 and ImeFakulteta=$4 and IDKorisnika=$5 and ImeFakultetskeJedinice=$6',
-    [comment, grade, UniveristyID, CollegeName, UserID, nameFacUnity],
-    (error, results) => {
-      if (error) {
-        console.log("Greška pri unosu univerziteta");
-      }
-
-      return results.rows;
-    }
-  );
+    [comment, grade, UniveristyID, CollegeName, UserID, nameFacUnity]);
+    return resluts.rows
 };
-const getNumberOfUnityComments = async (
+const getNumberOfFacultyUnitComments = async (
   UniveristyID,
   CollegeName,
   nameFacUnity
 ) => {
-  return await pool.query(
-    'SELECT count(Tekst) FROM public."KomentarFakultet" where IDUniverziteta = $1 and ImeFakulteta=$2 and ImeFakultetskeJedinice=$3',
-    [UniveristyID, CollegeName, nameFacUnity],
-    (error, results) => {
-      if (error) {
-        console.error("Error executing query", error);
-        return;
-      }
-      return results.rows;
-    }
-  );
+    const resluts = await pool.query(
+    'SELECT count(*) as unupnoKomentara FROM public."FakultetskaJedinicaKomentar" where IDUniverziteta = $1 and ImeFakulteta=$2 and ImeFakultetskeJedinice=$3',
+    [UniveristyID, CollegeName, nameFacUnity]);
+    return resluts.rows
 };
 
 module.exports = {
@@ -110,5 +68,5 @@ module.exports = {
   getGradeByCollege,
   insertCommentCollegeUnity,
   updateCommentCollegeUnity,
-  getNumberOfUnityComments,
+  getNumberOfFacultyUnitComments,
 };
