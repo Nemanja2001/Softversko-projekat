@@ -1,4 +1,4 @@
-const pool=require("./../dbconncetion/dbconn");
+const pool=require("./../dbconnection/dbconn");
 
 const getAllColleges = async ()=>{
     const results = await pool.query('SELECT * FROM public."Fakultet"');
