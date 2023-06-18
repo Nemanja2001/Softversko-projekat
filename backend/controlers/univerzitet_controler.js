@@ -18,7 +18,7 @@ const getUniversityByName = async(request, response)=>{
 }
 
 const getUniversitiesByCountry = async(request, response)=>{
-    const results = await universityfunctions.getUniversityByCountry(request.body)
+    const results = await universityfunctions.getUniversityByCountry(request.params.uniName)
     response.send(results)
 }
 

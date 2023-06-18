@@ -10,7 +10,7 @@ const getUniversityByID = async (UniverstyID)=>{
     return resluts.rows
 };
 const getUniversityByName = async (UniverstyName)=>{
-    const reluslts = await pool.query('Select * From public."Univerzitet" where Ime = $1',[UniverstyName.Name]);
+    const reluslts = await pool.query('Select * From public."Univerzitet" where Ime = $1',[UniverstyName]);
     return reluslts.rows
 };
 const getUniversityByCountry = async (Country)=>{
@@ -19,7 +19,7 @@ const getUniversityByCountry = async (Country)=>{
 };
 
 const insertUniveristy = async (info)=>{
-    const resluts = await pool.query('Insert into public."Univerzitet (Ime, Naziv_drzave) Values ($1,$2)',
+    const resluts = await pool.query('Insert into public."Univerzitet" (Ime, Naziv_drzave) Values ($1,$2)',
                             [info.ime, info.naziv_drzave]);
     return resluts.rows
 };
