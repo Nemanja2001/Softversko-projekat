@@ -13,7 +13,7 @@ router.route('/:email')
     .get(korisnicikontroler.getUserByEmail)
 router.route('/:userID')
     .get(korisnicikontroler.getUserByID)
-router.route('/:login')
+router.route('/login')
     .get(korisnicikontroler.login)
 
 module.exports=router;
