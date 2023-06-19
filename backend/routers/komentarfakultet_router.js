@@ -5,11 +5,20 @@ const FakultKomentarControl = require("./../controlers/komentarfakultet_controle
 
 router
   .route("/")
-  .post(FakultKomentarControl.insertCommentCollege)
-
+  .get(FakultKomentarControl.getCommentsByCollege)
+  .post(FakultKomentarControl.insertCommentCollege);
+router
+  .route('/update/:UserID')
+  .post(FakultKomentarControl.updateCommentCollege);
+router
+  .route('/ocjena/')
+  .get(FakultKomentarControl.getGradeByCollege);
+router
+  .route('/brojKomentara/')
+  .get(FakultKomentarControl.getNumberOfComments);
+router
   .route("/:UserID")
   .get(FakultKomentarControl.getCommentByUserID);
-
 module.exports = router;
 
 //Ubaci u index.js

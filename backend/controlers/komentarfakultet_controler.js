@@ -22,6 +22,7 @@ const getNumberOfComments = async(request, response)=>{
 }
 
 const insertCommentCollege = async(request, response)=>{
+    console.log(request.body)
     const reslut = await comementfacultyfunctions.insertCommentCollege(request.body)
     response.send(reslut)
 }
