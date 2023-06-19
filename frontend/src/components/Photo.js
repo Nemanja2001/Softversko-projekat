@@ -10,6 +10,7 @@ function Photo(){
             <div id="div2">
                 <hr></hr>
                 <h1 id="Naslov1">Kuda dalje</h1>
+                <h3>Jedino ograničenje našem dostignuću je naša sposobnost da tačno odredimo ono što želimo. – Entoni Robins</h3>
             </div>    
             </div>
 }

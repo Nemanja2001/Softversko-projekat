@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import './App.css';
 import PocetnaStranica from './pages/Pocetna stranica';
+
 import Kontakt from './pages/Kontakt';
 
 function App() {

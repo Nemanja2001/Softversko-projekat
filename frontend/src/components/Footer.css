@@ -1,0 +1,33 @@
+#info-flex{
+    display: flex;
+    font-size: 25px;
+    font-family: serif;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+#unutrasnji-flex{
+    display: flex;
+    flex: 2;
+    justify-content: space-evenly;
+}
+
+#prvi_sin{
+    flex: 1;
+}
+
+#nav-flex{
+    display: flex;
+    flex: 2;
+}
+
+#nav-flex>div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 2;
+}
+
+#nav-flex>div>div:hover{
+    color: red;
+}
