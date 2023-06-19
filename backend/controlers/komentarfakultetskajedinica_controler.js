@@ -15,8 +15,8 @@ const getUnityCommentByUserID = async (request, response) => {
   response.send(results);
 };
 
-const getGradeByCollege = async (request, response) => {
-  const results = await comementfacultyUnitfunctions.getGradeByCollege(
+const getGradeByCollegeUnit = async (request, response) => {
+  const results = await comementfacultyUnitfunctions.getGradeByCollegeUnit(
     request.body
   );
   response.send(results);
@@ -47,7 +47,7 @@ const getNumberOfFacultyUnitComments = async (request, response) => {
 module.exports = {
   getAllFacultyUnitCommentar,
   getUnityCommentByUserID,
-  getGradeByCollege,
+  getGradeByCollegeUnit,
   insertCommentCollegeUnity,
   updateCommentCollegeUnity,
   getNumberOfFacultyUnitComments,

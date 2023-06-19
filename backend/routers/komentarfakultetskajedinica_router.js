@@ -6,13 +6,15 @@ router
   .route("/")
   .get(KomentFakJedinicaControler.getAllFacultyUnitCommentar)
   .post(KomentFakJedinicaControler.insertCommentCollegeUnity);
-// router
-//   .route("/:NoOfComment")
-//   .get(KomentFakJedinicaRouter.getNumberOfFacultyUnitComments);
-// funkcija next treba da se implementira u repository komentarfakutetskajedinica
-
-//UPISI OVU RUTU U INDEX.JS!!!!
-
+router
+  .route('/update/:UserID')
+  .post(KomentFakJedinicaControler.updateCommentCollegeUnity);
+router
+  .route('/ocjena/')
+  .get(KomentFakJedinicaControler.getGradeByCollegeUnit);
+router
+  .route('/brojKomentara/')
+  .get(KomentFakJedinicaControler.getNumberOfFacultyUnitComments);
 router
   .route("/:UserID")
   .get(KomentFakJedinicaControler.getUnityCommentByUserID)
