@@ -55,7 +55,7 @@ const insertUser = async (user)=>{
 };
 
 const updatePass = async (ID, credencial) => {
-    const results = await pool.query('Update public."Koirsnici" set Password = $1 where ID = $2', [encrypt_text(credencial.password),ID]);
+    const results = await pool.query('Update public."Korisnici" set Password = $1 where ID = $2', [encrypt_text(credencial.password),ID]);
     return results.rows
 } 
 
