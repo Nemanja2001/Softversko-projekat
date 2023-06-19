@@ -15,6 +15,7 @@ function Text(){
                 {text2}
             </div>
         </div>
+        <br/>
     </div>
 }
 
