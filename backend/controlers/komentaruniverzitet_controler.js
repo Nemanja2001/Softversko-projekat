@@ -3,7 +3,7 @@ const pool = require("./../dbconnection/dbconn")
 const commentUfunctions = require("./../repositories/komentaruniverzitet_repository")
 
 const getCommentByUser = async(request, response)=>{
-    const userID=reques.params.userID
+    const userID=request.params.userID
     const result=await commentUfunctions.getCommentByUser(userID)
     response.send(result)
 };
@@ -23,7 +23,7 @@ const insertComment = async(request,response)=>{
 };
 const getNumOfComments = async(request,response)=>{
     const UniversityID=request.params.UniversityID
-    const result=await commentUfunctions.numOfComments(UniversityID)
+    const result=await commentUfunctions.getNumOfComments(UniversityID)
     response.send(result)
 };
 const updateComment = async(request,response)=>{
