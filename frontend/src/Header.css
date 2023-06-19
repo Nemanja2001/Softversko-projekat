@@ -1,0 +1,45 @@
+.flex-conatiner{
+    display: flex;
+    height: 20%;
+}
+.flex-conatiner div{
+    margin: 10px;
+    margin-left: 20px;
+    flex: 1;
+}
+#div-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 2;
+}
+#div-flex div{
+    font-weight: bold;
+    justify-content: space-around;
+}
+#div-flex div:hover{
+    color: red;
+}
+
+#logovanje{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    font-weight: bold;
+    align-content: center;
+    align-items: center;
+}
+
+#logovanje div{
+    background-color: white;
+    color: red;
+}
+img{
+    height: 90%;
+    width: 30%;
+}
+
+#Naslov1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
