@@ -8,9 +8,4 @@ router
   .get(FakulJedinicaControler.getFacultyUnitsByFaculty)
   .post(FakulJedinicaControler.insertFacultyUnit)
 
-  .route("/:UniversityID")
-  .get(FakulJedinicaControler.getFacultyUnitsByUniversity); //Ovo si rekao da ces izmijenit jer je visak
-
 module.exports = router;
-
-//Samo ubaci u index.js nisam tamo dirao
