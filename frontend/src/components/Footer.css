@@ -2,8 +2,17 @@
     display: flex;
     font-size: 25px;
     font-family: serif;
-    margin-left: 120px;
-    margin-top: 20px;
+    margin-left: 120px;   
+}
+#info-flex>div
+{
+    margin-top:100px;
+}
+#prvi_sin>div{
+    font-size: 16px;
+}
+#unutrasnji-flex>div{
+    font-size: 16px;
 }
 
 #unutrasnji-flex{

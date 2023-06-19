@@ -5,20 +5,20 @@ function Footer(){
     return(<div style={{backgroundColor:'#F7F3F5'}}>
         <div id="info-flex">
             <div id="prvi_sin" style={{lineHeight:'150%'}}>
-                <div style={{fontWeight:'bold',}}>Kuda dalje</div>
+                <div style={{fontWeight:'bold',fontSize:'25px'}}>Kuda dalje</div>
                 <br/>
                 <div>Podgorica, Crna Gora</div>
                 <div>81000</div>
             </div>
             <div id="unutrasnji-flex">
                 <div  style={{lineHeight:'150%'}}>
-                    <div style={{fontWeight:'bold'}}>Sjedište</div>
+                    <div style={{fontWeight:'bold',fontSize:'25px'}}>Sjedište</div>
                     <br/>
                     <div>Univerzitet Crne Gore</div>
                     <div>Address: 2 Cetinjski Put, Podgorica 81000</div>
                 </div>
                 <div  style={{lineHeight:'150%'}}>
-                    <div style={{fontWeight:'bold'}}>Radili</div>
+                    <div style={{fontWeight:'bold',fontSize:'25px'}}>Radili</div>
                     <br/>
                     <div>Lucija Jovanović</div>
                     <div>Nemanja Dragišić</div>

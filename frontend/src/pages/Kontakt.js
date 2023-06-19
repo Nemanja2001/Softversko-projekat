@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 import './Kontakt.css'
 
 function Kontakt(){
@@ -17,7 +18,9 @@ function Kontakt(){
         <br/>
         <input id="btnPosalji" type="submit" value="Pošalji"></input>
         </div>
+        <Footer/>
         </>
+        
     )
 }
 export default Kontakt
