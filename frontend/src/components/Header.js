@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.jpg";
+import logo from "./../photos/logo.jpg";
 import './Header.css'
 function Header(){
     return <div className="flex-conatiner">
