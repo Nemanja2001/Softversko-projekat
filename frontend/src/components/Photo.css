@@ -16,4 +16,13 @@
     left: 50px;
     z-index: 2;
     color: white;
- }
+}
+
+#btn{
+    line-height: 40px;
+    width: 150px;
+    background-color:white;
+    font-weight: bold;
+    color: crimson;
+    border-radius: 10px;
+}

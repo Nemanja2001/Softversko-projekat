@@ -11,6 +11,7 @@ function Photo(){
                 <hr></hr>
                 <h1 id="Naslov1">Kuda dalje</h1>
                 <h3>Jedino ograničenje našem dostignuću je naša sposobnost da tačno odredimo ono što želimo. – Entoni Robins</h3>
+                <button id="btn" >Univerziteti</button>
             </div>    
             </div>
 }
