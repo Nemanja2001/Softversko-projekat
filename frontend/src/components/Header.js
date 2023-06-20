@@ -24,7 +24,7 @@ function Header(){
                         else
                             window.location='/korisnik'
                     }}>Početna</div>
-                    <div>O platformi</div>
+                    <div onClick={()=>window.location='/Oplatformi'}>O platformi</div>
                     <div>Univerziteti</div>
                     <div onClick={provjera_tokena} style={{textAlign:'center'}}>Test profesionalne orijentacije</div>
                     <div onClick={()=>{
