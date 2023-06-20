@@ -17,6 +17,11 @@
     font-weight: bold;
     justify-content: space-around;
 }
+
+#div-flex div:hover{
+    cursor: pointer;
+}
+
 #div-flex div:hover{
     color: red;
 }
@@ -33,6 +38,10 @@
 #logovanje div{
     background-color: white;
     color: red;
+}
+
+#logovanje div:hover{
+    cursor: pointer;
 }
 #logo{
    margin-left: 10px;

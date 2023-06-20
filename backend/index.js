@@ -9,7 +9,6 @@ const userrouter = require('./routers/korisnici_router')
 const universitycommentsrouter = require('./routers/komentaruniverzitet_router')
 const facultycommentsrouter = require('./routers/komentarfakultet_router')
 const facultyunitcommentsrouter = require('./routers/komentarfakultetskajedinica_router')
-//const login = require('./../frontend/src/pages/Login')
 app.use(express.json())
 app.use(cors())
 app.use('/country/', drzavarouter);

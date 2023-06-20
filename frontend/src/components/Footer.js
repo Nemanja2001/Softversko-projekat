@@ -33,11 +33,11 @@ function Footer(){
         <div id="nav-flex">
             <div style={{flex:'1'}}></div>
             <div style={{flex:'2'}}>
-                <div>Početna</div>
+                <div onClick={()=>window.location='/'}>Početna</div>
                 <div>O platformi</div>
-                <div>Studije</div>
+                <div>Univerziteti</div>
                 <div>Aktivnosti</div>
-                <div>Kontkat</div>
+                <div onClick={()=>window.location='/kontakt'}>Kontakt</div>
             </div>
             <div style={{flex:'1'}}></div>
         </div>

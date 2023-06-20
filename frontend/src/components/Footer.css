@@ -39,4 +39,5 @@
 
 #nav-flex>div>div:hover{
     color: red;
+    cursor: pointer;
 }

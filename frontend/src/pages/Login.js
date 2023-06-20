@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+
+import Header from "../components/Header";
+
 class Login extends React.Component{
     constructor(props){
         super(props);
@@ -30,16 +32,22 @@ class Login extends React.Component{
 
     textChanged = (e)=>{
         console.log(e.target)
-        const {name, value } = e.target;
+        const { name, value } = e.target;
         this.setState({[name]:value});
     }
   
     render() {
         return (
           <div>
-            <input type="text" value={this.state.user} name='user' onChange={this.textChanged}/>
-            <input type="password" value={this.state.pass} name='pass' onChange={this.textChanged}/>
-            <button onClick={this.onButtonClick}>Loguj se</button>
+            <Header/>
+            <form>
+                <input type="text" value={this.state.user} name='user' onChange={this.textChanged}/>
+                <br/>
+                <input type="password" value={this.state.pass} name='pass' onChange={this.textChanged}/>
+                <br/>
+                <button onClick={this.onButtonClick}>Loguj se</button>
+            </form>
+            
         </div>
           )
     }

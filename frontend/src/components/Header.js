@@ -5,15 +5,15 @@ function Header(){
     return <div className="flex-conatiner">
                 <div><img id="logo" src={logo} alt="Ovjde treba da bude logo" ></img></div>
                 <div id="div-flex"> 
-                    <div>Početna</div>
+                    <div onClick={()=>window.location='/'}>Početna</div>
                     <div>O platformi</div>
-                    <div>Studije</div>
+                    <div>Univerziteti</div>
                     <div>Aktivnosti</div>
-                    <div>Kontakt</div>
+                    <div onClick={()=>window.location='/kontakt'}>Kontakt</div>
                 </div>
                 <div id="logovanje">
                     <div>Registruj se</div>
-                    <div>Uloguj se</div>
+                    <div onClick={()=>window.location='/login'}>Uloguj se</div>
                 </div>
             </div>
 }
