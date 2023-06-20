@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Card from './Card';
+import Card from './CardUniversity';
 
 const CardList = () => {
   const [responseData, setResponseData] = useState([]);
@@ -19,7 +19,7 @@ const CardList = () => {
   return (
     <div className="card-list">
       {responseData.map((x) => (
-        <Card ime={x.Ime} text={x.Opis}/>
+        <Card ime={x.Ime} text={x.Opis} id={x.ID}/>
       ))}
     </div>
   );
