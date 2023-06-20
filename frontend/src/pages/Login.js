@@ -11,7 +11,6 @@ class Login extends React.Component{
     }
     
     onButtonClick = () => {
-        localStorage.setItem('token',null);
         let data = {email:this.state.user, pass:this.state.pass}
         axios.post('http://localhost:3001/login/', data).then(
           (response) => {
@@ -20,7 +19,7 @@ class Login extends React.Component{
             else {
                 localStorage.setItem('token', response.data);
                 window.alert('Uspio login')
-                window.location = '/kontakt'
+                window.location = '/kontakt';
             }
         },
             (err)=>{
