@@ -11,9 +11,9 @@ class Login extends React.Component{
     }
     
     onButtonClick = () => {
+        localStorage.setItem('token',null);
         let data = {email:this.state.user, pass:this.state.pass}
         axios.post('http://localhost:3001/login/', data).then(
-            
           (response) => {
             if(!response.data)
                 window.alert('Login failed');
