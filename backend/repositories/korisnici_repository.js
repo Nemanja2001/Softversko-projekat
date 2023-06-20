@@ -44,8 +44,9 @@ const getUserByEmail = async (email)=>{
 };
 
 const registerUser = async (credencials)=>{
-    const resluts = await pool.query('Select * From public."Korisnici" where ("Email" = $1 or "Username" = $1) and "Password" = $2',[credencials.email, encrypt_text(credencials.pass)]);
-    return resluts.rows
+    
+    const results = await pool.query('Select * From public."Korisnici" where ("Email" = $1 or "Username" = $1) and "Password" = $2',[credencials.email, encrypt_text(credencials.pass)]);
+    return results.rows
 };
 
 const insertUser = async (user)=>{
@@ -55,7 +56,7 @@ const insertUser = async (user)=>{
 };
 
 const updatePass = async (ID, credencial) => {
-    const results = await pool.query('Update public."Korisnici" set Password = $1 where ID = $2', [encrypt_text(credencial.password),ID]);
+    const results = await pool.query('Update public."Korisnici" set "Password" = $1 where "ID" = $2', [encrypt_text(credencial.password),ID]);
     return results.rows
 } 
 
