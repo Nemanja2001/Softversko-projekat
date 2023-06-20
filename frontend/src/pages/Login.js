@@ -1,9 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
-
 import Header from "../components/Header";
-
+import Footer from "../components/Footer";
+import logo from "./../photos/logo.jpg"
+import './Login.css'
 class Login extends React.Component{
     constructor(props){
         super(props);
@@ -40,14 +40,20 @@ class Login extends React.Component{
         return (
           <div>
             <Header/>
-            <form>
-                <input type="text" value={this.state.user} name='user' onChange={this.textChanged}/>
+            <div id='divforma'>
+            <img id='pozadina' src={logo} alt="" />
+            <form id='forma-css'>
+                <label htmlFor='userinput' className="loginlabel">Korisničko ime ili e-mail</label>
+                <input id="userinput" className="input-login" type="text" value={this.state.user} name='user' onChange={this.textChanged}/>
                 <br/>
-                <input type="password" value={this.state.pass} name='pass' onChange={this.textChanged}/>
+                <label htmlFor='passinput' className="loginlabel">Šifra</label>
+                <input id="passinput" className="input-login" type="password" value={this.state.pass} name='pass' onChange={this.textChanged}/>
                 <br/>
-                <button onClick={this.onButtonClick}>Loguj se</button>
+                <button id='loginbtn' onClick={this.onButtonClick}>Prijavi se</button>
             </form>
+            </div>
             
+            <Footer/>
         </div>
           )
     }

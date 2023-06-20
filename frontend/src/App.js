@@ -1,6 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import axios from 'axios';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import PocetnaStranica from './pages/Pocetna stranica';
 import Login from './pages/Login';

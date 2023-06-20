@@ -1,0 +1,42 @@
+#forma-css{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    position: absolute;
+    align-items: center;
+    top:50%;
+    left: 30%;
+    opacity: 1;
+    align-items: stretch;
+}
+
+#loginbtn{
+    justify-self: end;
+    width: 15%;
+    height: 200%;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-right: 39%;
+}
+
+#divforma{
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-login{
+    height: 100%;
+    width: 61%;
+}
+#pozadina{
+    margin-left: 25%;
+    z-index: -1;
+    position: relative;
+    opacity: 0.3;
+}
+
+.loginlabel{
+    font-weight:bold;
+    align-self: flex-start;
+}
