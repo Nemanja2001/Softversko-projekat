@@ -17,9 +17,10 @@ class Login extends React.Component{
             if(!response.data)
                 window.alert('Login failed');
             else {
+                console.log(response.data)
                 localStorage.setItem('token', response.data);
                 window.alert('Uspio login')
-                window.location = '/kontakt';
+                window.location = '/korisnik/';
             }
         },
             (err)=>{
