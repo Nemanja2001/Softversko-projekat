@@ -1,13 +1,13 @@
 #slika1{
     width: 100%;
-    height: 10%;
+     height: 800px;
     z-index: -1;
 }
 
 #div1 {
     position: relative;
     z-index: 1;
-    height: 50%;
+    height: 800px;
  }
  
 #div2 {
