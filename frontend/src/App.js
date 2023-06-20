@@ -5,6 +5,7 @@ import PocetnaStranica from './pages/Pocetna stranica';
 import Login from './pages/Login';
 import Kontakt from './pages/Kontakt';
 import Oplatformi from './pages/Oplatformi';
+import Univerziteti from './pages/Univerziteti';
 
 function App() {
   //let location = useLocation()
@@ -18,6 +19,7 @@ function App() {
           <Route path='/korisnik/' Component={PocetnaStranica}></Route>
           <Route path='/korisnik/kontakt' Component={Kontakt}></Route>
           <Route path='/Oplatformi' Component={Oplatformi}></Route>
+          <Route path='/univerziteti' Component={Univerziteti}></Route>
       </Routes>
     </Router>
     </>

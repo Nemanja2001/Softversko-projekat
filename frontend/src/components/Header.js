@@ -25,7 +25,7 @@ function Header(){
                             window.location='/korisnik'
                     }}>Početna</div>
                     <div onClick={()=>window.location='/Oplatformi'}>O platformi</div>
-                    <div>Univerziteti</div>
+                    <div onClick={()=>window.location='/univerziteti'}>Univerziteti</div>
                     <div onClick={provjera_tokena} style={{textAlign:'center'}}>Test profesionalne orijentacije</div>
                     <div onClick={()=>{
                         if(!localStorage.getItem('token'))
