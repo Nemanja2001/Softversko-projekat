@@ -2,6 +2,8 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import './Test.css'
+import { setGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
+import { getGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
 
 
 function Test2(){
@@ -18,7 +20,7 @@ function Test2(){
         }
         if(oznaceni!=radioGrupa.length/4)
         {
-            alert('Molimo vas da odgovorite na sva pitanja u anketi. ');
+            alert('Molimo vas da odgovorite na sva pitanja u anketi. '+getGlobalnaPromenljiva());
             return false;
         }
         return true;
@@ -74,7 +76,7 @@ function Test2(){
                         <td><input type="radio" name="pitanje4" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Redovno pratim i posećujem sportske dogadjaje.</td>
+                        <td>Redovno pratim i posjećujem sportske dogadjaje.</td>
                         <td><input type="radio" name="pitanje5" value="1"></input></td>
                         <td><input type="radio" name="pitanje5" value="2"></input></td>
                         <td><input type="radio" name="pitanje5" value="3"></input></td>
@@ -109,7 +111,7 @@ function Test2(){
                         <td><input type="radio" name="pitanje9" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Uživao/la bih u profesiji koja podrazumeva savetovanje drugih kako da reše svoje probleme.</td>
+                        <td>Uživao/la bih u profesiji koja podrazumijeva savjetovanje drugih kako da reše svoje probleme.</td>
                         <td><input type="radio" name="pitanje10" value="1"></input></td>
                         <td><input type="radio" name="pitanje10" value="2"></input></td>
                         <td><input type="radio" name="pitanje10" value="3"></input></td>
@@ -130,21 +132,21 @@ function Test2(){
                         <td><input type="radio" name="pitanje12" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Anatomija</td>
+                        <td>Volim plivanje/skijanje.</td>
                         <td><input type="radio" name="pitanje13" value="1"></input></td>
                         <td><input type="radio" name="pitanje13" value="2"></input></td>
                         <td><input type="radio" name="pitanje13" value="3"></input></td>
                         <td><input type="radio" name="pitanje13" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Poljoprivreda</td>
+                        <td>Posjećujem gradsku biblioteku.</td>
                         <td><input type="radio" name="pitanje14" value="1"></input></td>
                         <td><input type="radio" name="pitanje14" value="2"></input></td>
                         <td><input type="radio" name="pitanje14" value="3"></input></td>
                         <td><input type="radio" name="pitanje14" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Logika</td>
+                        <td>Ispunjava me vrijeme provedeno sa zivotinjama.</td>
                         <td><input type="radio" name="pitanje15" value="1"></input></td>
                         <td><input type="radio" name="pitanje15" value="2"></input></td>
                         <td><input type="radio" name="pitanje15" value="3"></input></td>
@@ -158,7 +160,7 @@ function Test2(){
                         <td><input type="radio" name="pitanje16" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Volim da citam</td>
+                        <td>Volim da čitam</td>
                         <td><input type="radio" name="pitanje17" value="1"></input></td>
                         <td><input type="radio" name="pitanje17" value="2"></input></td>
                         <td><input type="radio" name="pitanje17" value="3"></input></td>
@@ -172,7 +174,7 @@ function Test2(){
                         <td><input type="radio" name="pitanje18" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Vrlo sam zainteresovana za istraživanje istorije kao i kultura različitih naroda</td>
+                        <td>Vrlo sam zainteresovan/a za istraživanje istorije kao i kultura različitih naroda</td>
                         <td><input type="radio" name="pitanje19" value="1"></input></td>
                         <td><input type="radio" name="pitanje19" value="2"></input></td>
                         <td><input type="radio" name="pitanje19" value="3"></input></td>
@@ -200,7 +202,7 @@ function Test2(){
                         <td><input type="radio" name="pitanje22" value="4"></input></td>
                     </tr>
                     <tr>
-                        <td>Volim da istražujem poreklo biljnog i životinjskog sveta.	1</td>
+                        <td>Volim da istražujem poreklo biljnog i životinjskog svijeta.</td>
                         <td><input type="radio" name="pitanje23" value="1"></input></td>
                         <td><input type="radio" name="pitanje23" value="2"></input></td>
                         <td><input type="radio" name="pitanje23" value="3"></input></td>
@@ -241,8 +243,145 @@ function Test2(){
                         <td><input type="radio" name="pitanje28" value="3"></input></td>
                         <td><input type="radio" name="pitanje28" value="4"></input></td>
                     </tr>
+                    <tr>
+                        <td>Voljela bih prisustvovati simpozijumu.</td>
+                        <td><input type="radio" name="pitanje29" value="1"></input></td>
+                        <td><input type="radio" name="pitanje29" value="2"></input></td>
+                        <td><input type="radio" name="pitanje29" value="3"></input></td>
+                        <td><input type="radio" name="pitanje29" value="4"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Vrlo sam precizan/na i spretan/na.</td>
+                        <td><input type="radio" name="pitanje30" value="1"></input></td>
+                        <td><input type="radio" name="pitanje30" value="2"></input></td>
+                        <td><input type="radio" name="pitanje30" value="3"></input></td>
+                        <td><input type="radio" name="pitanje30" value="4"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Zainteresovan/na sam za strukturu građevinskih objekata.</td>
+                        <td><input type="radio" name="pitanje31" value="1"></input></td>
+                        <td><input type="radio" name="pitanje31" value="2"></input></td>
+                        <td><input type="radio" name="pitanje31" value="3"></input></td>
+                        <td><input type="radio" name="pitanje31" value="4"></input></td>
+                    </tr>
                 </table>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div>
             <input id="btnDalje" type="submit" value="Submit" onClick={() => {if (provjeriAnketu()) {window.location = '/RezultatiTesta';}}}></input>
             </div>
