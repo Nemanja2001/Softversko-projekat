@@ -8,9 +8,6 @@ class Card extends React.Component{
 
     
     render(){
-        if(localStorage.getItem('UniversityID')){
-            localStorage.removeItem('UniversityID');
-        }
         const {uniId, naziv, text } = this.state
         return (<div className='card-container' onClick={()=>{
                 localStorage.setItem('UniversityID',uniId);

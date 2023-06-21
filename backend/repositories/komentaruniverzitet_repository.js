@@ -6,7 +6,7 @@ const getCommentByUser = async (UserID)=>{
 }
 
 const getCommentByUniversity = async (UniversityID)=>{
-    const resluts = await pool.query('Select * from public."KomentarUniverzitet" where "IDUniverziteta" = $1',[UniversityID]);
+    const resluts = await pool.query('Select "Ime","Prezime", "Tekst" from public."KomentarUniverzitet" inneer join public."Korisnici" on "ID"="IDKorisnika" where "IDUniverziteta" = $1',[UniversityID]);
     return resluts.rows
 }
 
