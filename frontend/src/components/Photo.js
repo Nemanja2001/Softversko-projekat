@@ -1,6 +1,6 @@
 import React from "react";
 import './Photo.css'
-import slika from './../photos/varja.jpeg'
+import slika from './../photos/masan.jpg'
 function Photo(){
     return <div>
             <div id="div1">
