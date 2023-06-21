@@ -24,10 +24,18 @@ hr{
 #oTestu > p {
     width:50%;
 }
-#btnDalje{
+.btn{
     font-size:20px;
     height: 40px;
     width:170px;
+    border-radius: 8px;
+    background-color: #F7F3F5;
+    border-color: white;
+    color:black;
+
+}
+.btn:hover{
+    background-color:#e85f5a;
 }
 #napomena{
     align-self: flex-start;

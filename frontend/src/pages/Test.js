@@ -2,15 +2,120 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import './Test.css'
-import { setGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
-import { getGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
 
 function Test(){
-    
-    function racunanjeRezultata()
-    {
-        let nova_vr=getGlobalnaPromenljiva()+1;
-        setGlobalnaPromenljiva(nova_vr);
+    function racunanjeTesta(){
+        var forma = document.getElementById('anketa');
+        var radioGrupa = forma.getElementsByTagName('input');
+        
+        localStorage.setItem('oblast1',0); /*sport*/ 
+        localStorage.setItem('oblast2',0) /*umjetnost*/ 
+        localStorage.setItem('oblast3',0) /*jezici*/
+        localStorage.setItem('oblast4',0) /*humanisticke*/
+        localStorage.setItem('oblast5',0) /*medicina*/
+        localStorage.setItem('oblast6',0) /*prirodne*/
+        localStorage.setItem('oblast7',0) /*gradjevina,arh,dizajn*/
+        
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'biologija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'fizika'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'matematika'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+            
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'straniJezici'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'ekonomija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'knjizevnost'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'istorija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'likovno'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'informatika'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'muzicko'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'fizicko'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'hemija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'psihologija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'sociologija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'anatomija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'poljoprivreda'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'logika'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pravni'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'filozofija'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
     }
     function provjeriAnketu() {
        
@@ -28,8 +133,7 @@ function Test(){
             alert('Molimo vas da odgovorite na sva pitanja u anketi. ');
             return false;
         }
-        racunanjeRezultata();
-        
+        racunanjeTesta();
         return true;
       }
     return (<>
@@ -196,7 +300,7 @@ function Test(){
                 </table>
             </div>
             <div>
-            <input id="btnDalje" type="submit" value="Dalje" onClick={() => {if (provjeriAnketu()) {alert(getGlobalnaPromenljiva());window.location = '/Test2';}}}></input>
+            <input class="btn" type="submit" value="Dalje" onClick={() => {if (provjeriAnketu()){window.location = '/Test2';}}}></input>
             </div>
         </div>
         <Footer/>   
