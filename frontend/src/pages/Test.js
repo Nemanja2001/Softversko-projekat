@@ -4,6 +4,24 @@ import Footer from "../components/Footer"
 import './Test.css'
 
 function Test(){
+    function provjeriAnketu() {
+       
+        var forma = document.getElementById('anketa');
+        var radioGrupa = forma.getElementsByTagName('input');
+        var oznaceni=0;
+      
+        for (var i = 0; i < radioGrupa.length; i++) {
+          if (radioGrupa[i].type === 'radio' && radioGrupa[i].checked === true) {
+            oznaceni++;
+            }
+        }
+        if(oznaceni!=radioGrupa.length/4)
+        {
+            alert('Molimo vas da odgovorite na sva pitanja u anketi. ');
+            return false;
+        }
+        return true;
+      }
     return (<>
         <Header/>
         <div id="test">
@@ -23,7 +41,7 @@ function Test(){
             </div>
             
             <div>
-                <table>
+                <table id="anketa">
                     <tr id="zaglavlje">
                         <th>Predmet</th>
                         <th>1</th>
@@ -55,127 +73,120 @@ function Test(){
                     </tr>
                     <tr>
                         <td>Strani jezici</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="straniJezici" value="1"></input></td>
+                        <td><input type="radio" name="straniJezici" value="2"></input></td>
+                        <td><input type="radio" name="straniJezici" value="3"></input></td>
+                        <td><input type="radio" name="straniJezici" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Ekonomski predmeti</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="ekonomija" value="1"></input></td>
+                        <td><input type="radio" name="ekonomija" value="2"></input></td>
+                        <td><input type="radio" name="ekonomija" value="3"></input></td>
+                        <td><input type="radio" name="ekonomija" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Književnost</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="knjizevnost" value="1"></input></td>
+                        <td><input type="radio" name="knjizevnost" value="2"></input></td>
+                        <td><input type="radio" name="knjizevnost" value="3"></input></td>
+                        <td><input type="radio" name="knjizevnost" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Istorija</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="istorija" value="1"></input></td>
+                        <td><input type="radio" name="istorija" value="2"></input></td>
+                        <td><input type="radio" name="istorija" value="3"></input></td>
+                        <td><input type="radio" name="istorija" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Likovno</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="likovno" value="1"></input></td>
+                        <td><input type="radio" name="likovno" value="2"></input></td>
+                        <td><input type="radio" name="likovno" value="3"></input></td>
+                        <td><input type="radio" name="likovno" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Informatika</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="informatika" value="1"></input></td>
+                        <td><input type="radio" name="informatika" value="2"></input></td>
+                        <td><input type="radio" name="informatika" value="3"></input></td>
+                        <td><input type="radio" name="informatika" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Muzicko</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="muzicko" value="1"></input></td>
+                        <td><input type="radio" name="muzicko" value="2"></input></td>
+                        <td><input type="radio" name="muzicko" value="3"></input></td>
+                        <td><input type="radio" name="muzicko" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Fizicko</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="fizicko" value="1"></input></td>
+                        <td><input type="radio" name="fizicko" value="2"></input></td>
+                        <td><input type="radio" name="fizicko" value="3"></input></td>
+                        <td><input type="radio" name="fizicko" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Hemija</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="hemija" value="1"></input></td>
+                        <td><input type="radio" name="hemija" value="2"></input></td>
+                        <td><input type="radio" name="hemija" value="3"></input></td>
+                        <td><input type="radio" name="hemija" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Psihologija</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="psihologija" value="1"></input></td>
+                        <td><input type="radio" name="psihologija" value="2"></input></td>
+                        <td><input type="radio" name="psihologija" value="3"></input></td>
+                        <td><input type="radio" name="psihologija" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Sociologija</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="sociologija" value="1"></input></td>
+                        <td><input type="radio" name="sociologija" value="2"></input></td>
+                        <td><input type="radio" name="sociologija" value="3"></input></td>
+                        <td><input type="radio" name="sociologija" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Anatomija</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="anatomija" value="1"></input></td>
+                        <td><input type="radio" name="anatomija" value="2"></input></td>
+                        <td><input type="radio" name="anatomija" value="3"></input></td>
+                        <td><input type="radio" name="anatomija" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Poljoprivreda</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="poljoprivreda" value="1"></input></td>
+                        <td><input type="radio" name="poljoprivreda" value="2"></input></td>
+                        <td><input type="radio" name="poljoprivreda" value="3"></input></td>
+                        <td><input type="radio" name="poljoprivreda" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Logika</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
-                    </tr>
-                    <tr>
-                        <td>Matematika</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="logika" value="1"></input></td>
+                        <td><input type="radio" name="logika" value="2"></input></td>
+                        <td><input type="radio" name="logika" value="3"></input></td>
+                        <td><input type="radio" name="logika" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Predmeti vezani za pravo</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="pravni" value="1"></input></td>
+                        <td><input type="radio" name="pravni" value="2"></input></td>
+                        <td><input type="radio" name="pravni" value="3"></input></td>
+                        <td><input type="radio" name="pravni" value="4"></input></td>
                     </tr>
                     <tr>
                         <td>Filozofija</td>
-                        <td><input type="radio" name="sport" value="1"></input></td>
-                        <td><input type="radio" name="sport" value="2"></input></td>
-                        <td><input type="radio" name="sport" value="3"></input></td>
-                        <td><input type="radio" name="sport" value="4"></input></td>
+                        <td><input type="radio" name="filozofija" value="1"></input></td>
+                        <td><input type="radio" name="filozofija" value="2"></input></td>
+                        <td><input type="radio" name="filozofija" value="3"></input></td>
+                        <td><input type="radio" name="filozofija" value="4"></input></td>
                     </tr>
                 </table>
             </div>
             <div>
-            <input id="btnDalje" type="submit" value="Dalje" onClick={()=>window.location='/Test2'}></input>
+            <input id="btnDalje" type="submit" value="Dalje" onClick={() => {if (provjeriAnketu()) {window.location = '/Test2';}}}></input>
             </div>
         </div>
         <Footer/>   

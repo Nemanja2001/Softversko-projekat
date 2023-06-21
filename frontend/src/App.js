@@ -27,6 +27,7 @@ function App() {
           <Route path='/korisnik/:userID/Oplatformi' Component={Oplatformi}></Route>
           <Route path='/univerziteti' Component={Univerziteti}></Route>
           <Route path='/korisnik/:userID/univerziteti' Component={Univerziteti}></Route>
+          <Route path='/RezultatiTesta' Component={Univerziteti}></Route>
       </Routes>
     </Router>
     </>
