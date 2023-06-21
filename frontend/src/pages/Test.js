@@ -2,8 +2,16 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import './Test.css'
+import { setGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
+import { getGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
 
 function Test(){
+    
+    function racunanjeRezultata()
+    {
+        let nova_vr=getGlobalnaPromenljiva()+1;
+        setGlobalnaPromenljiva(nova_vr);
+    }
     function provjeriAnketu() {
        
         var forma = document.getElementById('anketa');
@@ -20,6 +28,8 @@ function Test(){
             alert('Molimo vas da odgovorite na sva pitanja u anketi. ');
             return false;
         }
+        racunanjeRezultata();
+        
         return true;
       }
     return (<>
@@ -186,7 +196,7 @@ function Test(){
                 </table>
             </div>
             <div>
-            <input id="btnDalje" type="submit" value="Dalje" onClick={() => {if (provjeriAnketu()) {window.location = '/Test2';}}}></input>
+            <input id="btnDalje" type="submit" value="Dalje" onClick={() => {if (provjeriAnketu()) {alert(getGlobalnaPromenljiva());window.location = '/Test2';}}}></input>
             </div>
         </div>
         <Footer/>   
