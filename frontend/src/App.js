@@ -9,6 +9,7 @@ import Test from './pages/Test';
 import Test2 from './pages/Test2';
 import Univerziteti from './pages/Univerziteti';
 import Register from './pages/Register';
+import Fakulteti from './pages/Fakulteti';
 
 function App() {
   //let location = useLocation()
@@ -30,6 +31,8 @@ function App() {
           <Route path='/korisnik/:userID/univerziteti' Component={Univerziteti}></Route>
           <Route path='/RezultatiTesta' Component={Univerziteti}></Route>
           <Route path='/registracija' Component={Register}></Route>
+          <Route path='/univerziteti/:uniID/fakulteti' Component={Fakulteti}></Route>
+          <Route path='/korisnik/:userID/univerziteti/:uniID/fakulteti' Component={Fakulteti}></Route>
       </Routes>
     </Router>
     </>

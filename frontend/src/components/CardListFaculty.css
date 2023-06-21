@@ -1,0 +1,27 @@
+.div-flex-cards{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.fakulteti{
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+    background-color: beige;
+}
+
+.kartice{
+    width: 50%;
+    text-align: center;
+    line-height: 500%;
+    font-weight: bold;
+    
+}
+
+.kartice:hover{
+    color: red;
+    cursor: pointer;
+}
