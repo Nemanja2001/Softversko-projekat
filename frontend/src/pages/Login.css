@@ -8,19 +8,21 @@
     left: 30%;
     opacity: 1;
     align-items: stretch;
+    margin-bottom: 3px;
 }
 
 #loginbtn{
-    justify-self: end;
-    width: 15%;
-    height: 200%;
-    border-radius: 5px;
-    align-self: flex-end;
-    margin-right: 39%;
+    font-size:20px;
+    height: 40px;
+    width:170px;
+    border-radius: 8px;
+    background-color: #F7F3F5;
+    border-color: white;
+    color:black;
 }
 
 #loginbtn:hover{
-    cursor: pointer;
+    background-color:#e85f5a;
 }
 
 #divforma{
