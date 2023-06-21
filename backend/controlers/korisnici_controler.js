@@ -37,8 +37,7 @@ const updateUserPass = async(request, response)=>{
 
 const login = async(request, response)=>{
     const result = await userfunctions.registerUser(request.body);
-    console.log(request.body);
-    let returnValue = { token: null, msg: "", status: 200 };
+    let returnValue = { token: null, msg: "", status: 200};
 
     if (typeof result[0] === 'undefined') {
         returnValue.msg = "Incorrect email/password";
