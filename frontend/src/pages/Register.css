@@ -4,7 +4,7 @@
     width: 60%;
     position: absolute;
     align-items: center;
-    top:50%;
+    top:35%;
     left: 30%;
     opacity: 1;
     align-items: stretch;
@@ -19,11 +19,8 @@
     margin-right: 39%;
 }
 
-#loginbtn:hover{
-    cursor: pointer;
-}
-
 #divforma{
+    
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -34,6 +31,7 @@
     width: 61%;
 }
 #pozadina{
+   
     margin-left: 25%;
     z-index: -1;
     position: relative;

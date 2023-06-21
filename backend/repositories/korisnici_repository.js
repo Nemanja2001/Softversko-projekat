@@ -10,7 +10,7 @@ function encrypt_text(pass){
     const plainText = pass;
 
     // Inicijalni vektor
-    const iv = crypto.randomBytes(16);
+    const iv = '1234567890abcdef';
 
     // Kreiranje chiper algoritma
     const cipher = crypto.createCipheriv(algorithm, secretKey, iv);
