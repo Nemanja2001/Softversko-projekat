@@ -2,11 +2,217 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import './Test.css'
-import { setGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
-import { getGlobalnaPromenljiva } from "../components/GlobalnePromjenljive";
-
-
 function Test2(){
+    function maks(){
+        var m=0;
+        var m1='';
+        if(parseInt(localStorage.getItem('oblast1'))>m){
+            m=parseInt(localStorage.getItem('oblast1'));
+            m1='oblast1';
+        }
+        if(parseInt(localStorage.getItem('oblast2'))>m){
+            m=parseInt(localStorage.getItem('oblast2'))
+            m1='oblast2';
+        }
+         if(parseInt(localStorage.getItem('oblast3'))>m){
+            m=parseInt(localStorage.getItem('oblast3'))
+            m1='oblast3';
+        }
+         if(parseInt(localStorage.getItem('oblast4'))>m){
+            m=parseInt(localStorage.getItem('oblast4'))
+            m1='oblast4';
+        }
+         if(parseInt(localStorage.getItem('oblast5'))>m){
+            m=parseInt(localStorage.getItem('oblast5'))
+            m1='oblast5';
+        }
+        if(parseInt(localStorage.getItem('oblast6'))>m){
+            m=parseInt(localStorage.getItem('oblast6'))
+            m1='oblast6';
+        }
+        if(parseInt(localStorage.getItem('oblast7'))>m){
+            m=parseInt(localStorage.getItem('oblast7'))
+            m1='oblast7';
+        }
+        
+        localStorage.setItem('rezultat',m1);
+        alert(localStorage.getItem('rezultat'))
+    }
+    function racunanjeTesta(){
+        var forma = document.getElementById('anketa2');
+        var radioGrupa = forma.getElementsByTagName('input');
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje1'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+(parseInt(radioGrupa[i].value,10))*2);
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje2'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje3'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+(parseInt(radioGrupa[i].value,10))*2);
+            }
+        }
+         for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje4'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje5'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+(parseInt(radioGrupa[i].value,10))*2);
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje6'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje7'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje8'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje9'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje10'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje11'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje12'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje13'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje14'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje15'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje16'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje17'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje18'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje19'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje20'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje21'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
+                localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje22'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje23'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje24'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje25'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje26'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje27'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje28'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje29'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje30'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        for (var i = 0; i < radioGrupa.length; i++) {
+            if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje31'&& radioGrupa[i].checked === true) {
+                localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
+            }
+        }
+        alert(localStorage.getItem('oblast1')+' '+localStorage.getItem('oblast2')+' '+localStorage.getItem('oblast3')+' '+localStorage.getItem('oblast4')+' '+
+        localStorage.getItem('oblast5')+' '+localStorage.getItem('oblast6')+' '+localStorage.getItem('oblast7'))
+        maks();
+    }
     function provjeriAnketu() {
        
         var forma = document.getElementById('anketa2');
@@ -20,9 +226,10 @@ function Test2(){
         }
         if(oznaceni!=radioGrupa.length/4)
         {
-            alert('Molimo vas da odgovorite na sva pitanja u anketi. '+getGlobalnaPromenljiva());
+            alert('Molimo vas da odgovorite na sva pitanja u anketi. ');
             return false;
         }
+        racunanjeTesta();
         return true;
       }
     return (<>
@@ -48,7 +255,7 @@ function Test2(){
                     </tr>
                     <hr />
                     <tr>
-                        <td>Vežbam i treniram svakodnevno.</td>
+                        <td >Vežbam i treniram svakodnevno.</td>
                         <td><input type="radio" name="pitanje1" value="1"></input></td>
                         <td><input type="radio" name="pitanje1" value="2"></input></td>
                         <td><input type="radio" name="pitanje1" value="3"></input></td>
@@ -267,123 +474,8 @@ function Test2(){
                 </table>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            +
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div>
-            <input id="btnDalje" type="submit" value="Submit" onClick={() => {if (provjeriAnketu()) {window.location = '/RezultatiTesta';}}}></input>
+            <input class="btn" type="submit" value="Submit" onClick={() => {if (provjeriAnketu()) {window.location = '/RezultatiTesta';}}}></input>
             </div>
         </div>
         <Footer/>   
