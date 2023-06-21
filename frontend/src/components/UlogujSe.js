@@ -5,7 +5,7 @@ class UlogujSe extends React.Component{
 
     render(){
         return<><div id="logovanje">
-        <div>Registruj se</div>
+        <div onClick={()=>window.location='/registracija'}>Registruj se</div>
         <div onClick={()=>window.location='/login'}>Uloguj se</div>
         </div></>
     }

@@ -11,23 +11,20 @@ class Login extends React.Component{
     }
 
     onButtonClick = () => {
-        let data = {username:this.state.username, pass:this.state.pass}
+        let data = {username:this.state.user, pass:this.state.pass}
         axios.post('http://localhost:3001/login/', data).then(
-          (response) => {
-            if(!response.data)
+          response => {
+            console.log(response.data);
+            if(response.data.token===null || !response.data){
                 window.alert('Login failed');
-            else {
-                console.log(response.data)
+            }else {
+                //console.log(response.data)
                 localStorage.setItem('token', response.data);
                 localStorage.setItem('username', this.state.user);
                 //let {userID} = localStorage.getItem('token');
                 window.alert('Uspio login ');
                 window.location = '/korisnik/'+this.state.user;
             }
-            },
-            (err)=>{
-                console.log(err);
-                window.alert(err);
             }
             ).catch(error=>console.error(error));
         
