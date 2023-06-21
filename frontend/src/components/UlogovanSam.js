@@ -1,12 +1,10 @@
 import React from "react";
 import './UlogovanSam.css'
 class UlogovanSam extends React.Component{
-    constructor(params){
-        super(params);
-        this.state={name:"", surname:"", email:params.mail}
-    }
+    
     onclick_fun(){
         localStorage.removeItem('token');
+        localStorage.removeItem('username');
         window.location ='/'
     }
     
@@ -15,7 +13,7 @@ class UlogovanSam extends React.Component{
         return<div class="dropdown">
         <button class="dropbtn">Prijavljeni ste</button>
         <div class="dropdown-content">
-          <a onClick={this.onclick_fun}>Izloguj se</a>
+          <p onClick={this.onclick_fun}>Izloguj se</p>
         </div>
       </div>
     }

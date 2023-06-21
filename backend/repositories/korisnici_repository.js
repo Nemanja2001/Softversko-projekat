@@ -10,7 +10,7 @@ function encrypt_text(pass){
     const plainText = pass;
 
     // Inicijalni vektor
-    const iv = '0123456789abcdef';
+    const iv = crypto.randomBytes(16);
 
     // Kreiranje chiper algoritma
     const cipher = crypto.createCipheriv(algorithm, secretKey, iv);
@@ -44,8 +44,7 @@ const getUserByEmail = async (email)=>{
 };
 
 const registerUser = async (credencials)=>{
-    
-    const results = await pool.query('Select * From public."Korisnici" where ("Email" = $1 or "Username" = $1) and "Password" = $2',[credencials.email, encrypt_text(credencials.pass)]);
+    const results = await pool.query('Select * From public."Korisnici" where "Username" = $1 and "Password" = $2',[credencials.username, encrypt_text(credencials.pass)]);
     return results.rows
 };
 

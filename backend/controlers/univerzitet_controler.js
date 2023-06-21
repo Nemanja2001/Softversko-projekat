@@ -3,7 +3,7 @@ const universityfunctions = require("./../repositories/univerzitet_repository")
 
 const getAllUniversities = async(request, response)=>{
     const result = await universityfunctions.getAllUniversities();
-    response.send(result)
+    response.json(result)
 }
 
 const getUniversityByID = async(request, response)=>{
