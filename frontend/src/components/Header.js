@@ -22,16 +22,26 @@ function Header(){
                         if(!localStorage.getItem('token'))
                             window.location='/'
                         else
-                            window.location='/korisnik'
+                            window.location='/korisnik/'+localStorage.getItem('username')
                     }}>Početna</div>
-                    <div onClick={()=>window.location='/Oplatformi'}>O platformi</div>
-                    <div onClick={()=>window.location='/univerziteti'}>Univerziteti</div>
+                    <div onClick={()=>{
+                        if(!localStorage.getItem('token'))
+                            window.location='/Oplatformi'
+                        else
+                            window.location = '/korisnik/'+localStorage.getItem('username')+'/Oplatformi'
+                        }}>O platformi</div>
+                    <div onClick={()=>{
+                        if(!localStorage.getItem('token'))
+                            window.location='/univerziteti'
+                        else
+                            window.location ='/korisnik/'+localStorage.getItem('username')+'/univerziteti'
+                        }}>Univerziteti</div>
                     <div onClick={provjera_tokena} style={{textAlign:'center'}}>Test profesionalne orijentacije</div>
                     <div onClick={()=>{
                         if(!localStorage.getItem('token'))
                             window.location='/kontakt'
                         else
-                            window.location='/korisnik/kontakt'
+                            window.location='/korisnik/'+localStorage.getItem('username')+'/kontakt'
                     }}>Kontakt</div>
                 </div>
                 {!location.pathname.includes('korisnik') && <UlogujSe/>}
