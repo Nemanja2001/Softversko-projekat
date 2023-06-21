@@ -1,0 +1,36 @@
+#test >div{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+}
+table {
+    width: 50%;
+  }
+th{
+   text-align:left;
+}
+
+hr{
+    border: none; /* Uklanja postojeću liniju */
+    border-bottom: 1px solid #ef4d48; /* Postavlja novu liniju debljine 1px i crne boje */
+    width: 145%; 
+}
+#zaglavlje >th{
+    font-size:20px;
+}
+
+#oTestu > p {
+    width:50%;
+}
+#btnDalje{
+    font-size:20px;
+    height: 40px;
+    width:170px;
+}
+#napomena{
+    align-self: flex-start;
+    margin-left: 25%;
+    font-style: italic;
+}
