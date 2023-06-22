@@ -11,7 +11,7 @@ function Photo(){
                 <h1 id="Naslov1">Kuda dalje</h1>
                 <hr></hr>
                 <h3>Jedino ograničenje našem dostignuću je naša sposobnost da tačno odredimo ono što želimo. – Entoni Robins</h3>
-                <button id="btn" onClick={()=>window.location='/univerziteti'} >Univerziteti</button>
+                <button class="btn" onClick={()=>window.location='/univerziteti'} >Univerziteti</button>
             </div>    
             </div>
 }
