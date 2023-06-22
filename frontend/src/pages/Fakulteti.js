@@ -15,7 +15,7 @@ class Fakulteti extends React.Component{
             <div>
                 <Header />
                     <CardListFaculty />
-                    <Komentari/>
+                    <Komentari />
                 <Footer />
             </div>
         )

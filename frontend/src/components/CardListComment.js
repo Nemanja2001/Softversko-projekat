@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import CardCommentUniversity from "./CardCommentUniversity";
+import CardCommentUniversity from "./CardComment";
 class CardCommentList extends React.Component{
     constructor(props){
         super(props);
