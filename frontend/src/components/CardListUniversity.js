@@ -23,7 +23,7 @@ class CardList extends React.Component {
     return (
       <div className="card-list">
         {this.state.Data.map((x) => (
-          <Card ime={x.Ime} text={x.Opis} id={x.ID}/>
+          <Card ime={x.Ime} text={x.Opis} id={x.ID} slika={x.Slika}/>
         ))}
       </div>
     );
