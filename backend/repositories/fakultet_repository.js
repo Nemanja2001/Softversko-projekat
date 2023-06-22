@@ -13,13 +13,18 @@ const getCollegeByName = async (CollegeName,info)=>{
     return results.rows
 };
 const insertCollege= async (info)=>{
-    const results = await pool.query('Insert into public."Fakultet" ("IDUniverziteta", "Ime") Values ($1,$2)',[info.UniversityID,info.name])
+    const results = await pool.query('Insert into public."Fakultet" ("IDUniverziteta", "Ime","oblast") Values ($1,$2,$3)',[info.UniversityID,info.name, info.oblast])
     return results.rows
 };
+const getCollegeByOblast = async(oblast)=>{
+    const result = await pool.query('Select "IDUniverziteta","Ime" FROM public."Fakultet" WHERE "oblast"=$1',[oblast])
+    return result.rows
+}
 
 module.exports={
     getAllColleges,
     getCollegeByName,
     getCollegeByUniversityID,
-    insertCollege
+    insertCollege,
+    getCollegeByOblast
 }

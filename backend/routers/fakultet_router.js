@@ -10,5 +10,7 @@ router.route("/:name")
   .get(fakultetcontroler.getCollegeByName);
 router.route("/university/:UniversityID")
   .get(fakultetcontroler.getCollegeByUniversityID)
+router.route("/oblast/:oblast")
+  .get(fakultetcontroler.getCollegeByOblast);
 
 module.exports = router;
