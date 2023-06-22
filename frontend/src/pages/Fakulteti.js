@@ -10,6 +10,9 @@ class Fakulteti extends React.Component{
     }
 
     render(){
+        if(localStorage.getItem('faculty')){
+            localStorage.removeItem('faculty');
+        }
         return (
             <div>
                 <Header />

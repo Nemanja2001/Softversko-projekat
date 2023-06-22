@@ -15,7 +15,7 @@ class CardFaculty extends React.Component {
                 if(!localStorage.getItem('token')) 
                     window.location='/univerziteti/'+localStorage.getItem('UniversityID')+'/fakulteti/'+localStorage.getItem('faculty')+'/fakultetskejedinice'
                 else 
-                    window.location='/korisnik/'+localStorage.getItem('username')+'/univerziteti/'+localStorage.getItem('UniversityID')+'/fakulteti'+localStorage.getItem('faculty')+'/fakultetskejedinice'       
+                    window.location='/korisnik/'+localStorage.getItem('username')+'/univerziteti/'+localStorage.getItem('UniversityID')+'/fakulteti/'+localStorage.getItem('faculty')+'/fakultetskejedinice'       
             
             }}>
               {name}  

@@ -7,6 +7,9 @@ class Univerziteti extends React.Component{
   
 
   render(){
+    if(localStorage.getItem('UniversityID')){
+      localStorage.removeItem('UniversityID')
+    }
     return (<div>
       <Header/>
       <div className="app">
