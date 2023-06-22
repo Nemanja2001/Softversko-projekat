@@ -10,6 +10,7 @@ import Test2 from './pages/Test2';
 import Univerziteti from './pages/Univerziteti';
 import Register from './pages/Register';
 import Fakulteti from './pages/Fakulteti';
+import FakultetskaJednicia from './pages/Fakultetska jedinica';
 
 function App() {
   //let location = useLocation()
@@ -24,8 +25,9 @@ function App() {
           <Route path='/login' exact Component={Login}></Route>
           <Route path='/korisnik/:userID' Component={PocetnaStranica}></Route>
           <Route path='/Oplatformi' Component={Oplatformi}></Route>
-          <Route path='/Test' Component={Test}></Route>
-          <Route path='/Test2' Component={Test2}></Route>
+          <Route path='/korisnik/:userID/testorijentacije' Component={Oplatformi}></Route>
+          <Route path='/korisnik/:userID/testorijentacije/Test' Component={Test}></Route>
+          <Route path='/korisnik/:userID/testorijentacije/Test2' Component={Test2}></Route>
           <Route path='/korisnik/:userID/Oplatformi' Component={Oplatformi}></Route>
           <Route path='/univerziteti' Component={Univerziteti}></Route>
           <Route path='/korisnik/:userID/univerziteti' Component={Univerziteti}></Route>
@@ -33,6 +35,8 @@ function App() {
           <Route path='/registracija' Component={Register}></Route>
           <Route path='/univerziteti/:uniID/fakulteti' Component={Fakulteti}></Route>
           <Route path='/korisnik/:userID/univerziteti/:uniID/fakulteti' Component={Fakulteti}></Route>
+          <Route path='/univerziteti/:uniID/fakulteti/:facultyName/fakultetskejedinice' Component={FakultetskaJednicia}></Route>
+          <Route path='/korisnik/:userID/univerziteti/:uniID/fakulteti/:facultyName/fakultetskejedinice' Component={FakultetskaJednicia}></Route>
       </Routes>
     </Router>
     </>
