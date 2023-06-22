@@ -38,7 +38,7 @@ const updateUserPass = async(request, response)=>{
 const login = async(request, response)=>{
     const result = await userfunctions.registerUser(request.body);
     console.log(result)
-    let returnValue = { token: null, msg: "", status: 200};
+    let returnValue = { token: null, msg: "", status: 200, id:""};
 
     if (typeof result[0] === 'undefined') {
         console.log("Ovdje sam")
@@ -49,6 +49,7 @@ const login = async(request, response)=>{
 
     let toSend = { userID: result[0].ID, Username: result[0].Username, Email: result[0].Email, Password: result[0].Password, Name: result[0].Name, 
         Surname: result[0].Surname, isAdmin: result[0].Type};
+        returnValue.id = toSend.userID;
     jwt.sign(toSend, 'SECRET', (err, token) => {
         returnValue.token = token;
         response.send(returnValue);
