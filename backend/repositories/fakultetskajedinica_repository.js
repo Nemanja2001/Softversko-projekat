@@ -3,6 +3,7 @@ const pool = require("../dbconnection/dbconn");
 const getFacultyUnitsByFaculty = async (FacultyName, UniversityID)=>{
     const results = await pool.query('Select "Ime" from public."FakultetskaJedinica" where "ImeFakulteta" = $1 and "IDUniverzitet"=$2',
                                     [FacultyName, UniversityID])
+    
     return results.rows
 }
 

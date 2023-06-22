@@ -12,7 +12,6 @@ class CardCommentList extends React.Component{
         .then(
             response=>{
                 this.setState({komentari:response.data});
-                console.log(response.data)
             }
         )
         .catch(error=>console.error(error))
@@ -23,7 +22,6 @@ class CardCommentList extends React.Component{
         .then(
             response=>{
                 this.setState({komentari:response.data});
-                console.log(response.data)
             }
         )
         .catch(error=>console.error(error))

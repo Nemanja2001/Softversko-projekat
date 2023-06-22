@@ -2,7 +2,9 @@ const pool = require("./../dbconnection/dbconn")
 const facultyunitfunctions = require("./../repositories/fakultetskajedinica_repository")
 
 const getFacultyUnitsByFaculty = async(request, response)=>{
-    const results  = await facultyunitfunctions.getFacultyUnitsByFaculty(request.body.FacultyName, request.body.UniversityID)
+    const encodedData = request.query.data;
+    const decodedData = JSON.parse(decodeURIComponent(encodedData));
+    const results  = await facultyunitfunctions.getFacultyUnitsByFaculty(decodedData.FacultyName, decodedData.UniversityID)
     response.send(results)
 }
 

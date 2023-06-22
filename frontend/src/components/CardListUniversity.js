@@ -12,7 +12,6 @@ class CardList extends React.Component {
     axios.get('http://localhost:3001/universities')
       .then(response => {
         this.setState({Data:response.data});
-        console.log(response.data)
       })
       .catch(error => {
         console.error(error);

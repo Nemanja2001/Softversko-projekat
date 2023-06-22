@@ -10,7 +10,7 @@ import Test2 from './pages/Test2';
 import Univerziteti from './pages/Univerziteti';
 import Register from './pages/Register';
 import Fakulteti from './pages/Fakulteti';
-import FakultetskaJednicia from './pages/Fakultetska jedinica';
+import FakultetskaJednicia from './pages/Fakultetske jedinice';
 
 function App() {
   //let location = useLocation()

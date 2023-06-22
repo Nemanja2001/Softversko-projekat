@@ -7,7 +7,7 @@ class Card extends React.Component{
     }
 
     render(){
-        const {uniId, naziv, text } = this.state
+        const {naziv, text } = this.state
         return (<div className='card-container' onClick={()=>{
             localStorage.setItem('UniversityID',this.state.uniId);
             if(!localStorage.getItem('token')) 
