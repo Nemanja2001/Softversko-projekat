@@ -234,7 +234,7 @@ function Test2(){
       }
     return (<>
         <Header/>
-        <div id="test">
+        <div class="test">
             <div>
                 <h1>Test profesionalne orijentacije</h1>
             </div>
@@ -475,7 +475,7 @@ function Test2(){
             </div>
 
             <div>
-            <input class="btn" type="submit" value="Submit" onClick={() => {if (provjeriAnketu()) {window.location = '/RezultatiTesta';}}}></input>
+            <input class="btn" type="submit" value="Submit" onClick={() => {if (provjeriAnketu()) {window.location =  '/korisnik/'+localStorage.getItem('username')+'/testorijentacije/RezultatiTesta';}}}></input>
             </div>
         </div>
         <Footer/>   

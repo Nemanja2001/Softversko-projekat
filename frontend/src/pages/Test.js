@@ -138,18 +138,14 @@ function Test(){
       }
     return (<>
         <Header/>
-        <div id="test">
+        <div class="test">
             <div>
                 <h1>Test profesionalne orijentacije</h1>
             </div>
-
-            <div id="oTestu">
-                <p>
-                Čovjek provede 2/3 svog života radeći i iz tog razloga je važno da posao koji odabereš bude u skladu sa tvojim sposobnostima, karakteristikama ličnosti, tvojim željama i sklonostima, kako bi u njemu mogao/la da uživaš a samim tim i da budeš produktivniji i uspešniji.
-                </p>
-                <p>
-                U želji da Vam pomognemo u donošenju važne odluke, molimo Vas da odradite test u nastavku!
-                <br/>                
+           
+            <div class="oTestu">
+                <p>               
+                <br/>            
                 Vaš zadatak je da procenite u kojoj mjeri volite navedene aktivnosti, odnosno koliko se na Vas odnose navedene tvrdnje na skali od 1 do 4. “1” je najniža ocjena, a “4” je najviša. Na kraju testa, dobićete informaciju koja profesionalna oblast Vam najviše odgovara i ponude za različite fakultete iz te oblasti koji bi Vas mogli zanimati.
                 </p>
             </div>
@@ -300,7 +296,7 @@ function Test(){
                 </table>
             </div>
             <div>
-            <input class="btn" type="submit" value="Dalje" onClick={() => {if (provjeriAnketu()){window.location = '/Test2';}}}></input>
+            <input class="btn" type="submit" value="Dalje" onClick={() => {if (provjeriAnketu()){window.location = '/korisnik/'+localStorage.getItem('username')+'/testorijentacije/Test2';}}}></input>
             </div>
         </div>
         <Footer/>   
