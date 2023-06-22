@@ -49,8 +49,15 @@ class Login extends React.Component{
                 <label htmlFor='passinput' className="loginlabel">Šifra</label>
                 <input id="passinput" className="input-login" type="password" value={this.state.pass} name='pass' onChange={this.textChanged}/>
                 <br/>
-                <button id='loginbtn' onClick={this.onButtonClick}>Prijavi se</button>
+                <div style={{display:'flex', flexDirection:'column'}}>
+                    <button id='loginbtn' onClick={this.onButtonClick}>Prijavi se</button>
+                    <label class="regLabel">Nemate nalog?</label>
+                    <br/>
+                    <label class="regLabel" onClick={()=>window.location='/registracija'}>Registruj se</label>
+                </div>
+                
             </form>
+
             </div>
             
             <Footer/>
