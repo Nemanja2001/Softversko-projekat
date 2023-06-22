@@ -17,7 +17,7 @@ const insertCollege= async (info)=>{
     return results.rows
 };
 const getCollegeByOblast = async(oblast)=>{
-    const result = await pool.query('Select "IDUniverziteta","Ime" FROM public."Fakultet" WHERE "oblast"=$1',[oblast])
+    const result = await pool.query('Select u."Ime" as "ImeUniverziteta", "IDUniverziteta",f."Ime" FROM public."Fakultet" f inner join public."Univerzitet" u on u."ID"=f."IDUniverziteta" WHERE "oblast"=$1',[oblast])
     return result.rows
 }
 

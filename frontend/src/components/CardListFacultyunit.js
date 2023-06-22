@@ -9,8 +9,8 @@ class CardListFacultyunit extends React.Component{
 
     dobij_fakultetske_jedinice(){
         const data ={
-            UniversityID:'2',
-            FacultyName:'Biotehnicki fakultet'
+            UniversityID:localStorage.getItem('UniversityID'),
+            FacultyName:localStorage.getItem('faculty')
         };
         const encodedData = encodeURIComponent(JSON.stringify(data));
         const url = `http://localhost:3001/facultyunit?data=${encodedData}`;
@@ -19,7 +19,6 @@ class CardListFacultyunit extends React.Component{
             if(!response.data){
             window.alert("Greška pri preuzimanju fakultetskih jedinica");
             }else{
-            console.log(response)
             this.setState({rezultati:response.data});
         }
         })
