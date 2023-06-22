@@ -23,6 +23,7 @@
 
 #loginbtn:hover{
     background-color:#e85f5a;
+    cursor: pointer;
 }
 
 #divforma{

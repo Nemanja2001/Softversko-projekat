@@ -26,3 +26,9 @@
     color: crimson;
     border-radius: 10px;
 }
+
+#btn:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}

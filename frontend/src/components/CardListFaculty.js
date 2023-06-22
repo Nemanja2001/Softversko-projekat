@@ -1,7 +1,6 @@
 import React from "react";
 import CardFaculty from "./CardFaculty";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import './CardListFaculty.css'
 class CardListFaculty extends React.Component{
     constructor(props){

@@ -29,7 +29,7 @@
 #logovanje{
     display: flex;
     flex: 1;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-weight: bold;
     align-content: center;
     align-items: center;
@@ -42,6 +42,8 @@
 
 #logovanje div:hover{
     cursor: pointer;
+    background-color: red;
+    color: white;
 }
 #logo{
    margin-left: 10px;

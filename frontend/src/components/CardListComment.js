@@ -7,7 +7,7 @@ class CardCommentList extends React.Component{
         this.state={komentari:[]};
     }
 
-    dobij_komentare(){
+    dobij_komentare_univerziteti(){
         axios.get('http://localhost:3001/universitycomments/university/'+localStorage.getItem('UniversityID'),[])
         .then(
             response=>{
@@ -17,9 +17,15 @@ class CardCommentList extends React.Component{
         )
         .catch(error=>console.error(error))
     }
-
+    
     render(){
-        this.dobij_komentare()
+        if(localStorage.getItem('facultyunit')){
+
+        }else if (localStorage.getItem('faculty')){
+
+        }else{ 
+        this.dobij_komentare_univerziteti()
+        }
         const {komentari} = this.state
         return(
             <div>
