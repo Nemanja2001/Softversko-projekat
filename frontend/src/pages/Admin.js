@@ -5,7 +5,7 @@ import axios from "axios";
 class Admin extends React.Component{
     constructor(props){
         super(props);
-        this.state={drzave:[], univerziteti:[],fakulteti:[], univerzitetID:''};
+        this.state={drzave:[], univerziteti:[], fakulteti:[], univerzitetID:''};
     }
 
     uzmi_drzave(){
