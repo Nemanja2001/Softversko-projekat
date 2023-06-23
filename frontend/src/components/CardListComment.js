@@ -49,7 +49,8 @@ class CardCommentList extends React.Component{
                 {komentari.map((x)=>
                 <CardCommentUniversity ime={x.Name} prezime={x.Surname} tekst={x.Tekst} ocjena={x.Ocjena} />)}
 
-                {this.state.ulogovan && <button style={{marginTop:'50px'}}className="btn" onClick={()=>{
+                {this.state.ulogovan && !this.state.komentari.map(x=>x.IDKorisnika).includes(parseInt(localStorage.getItem('username'),10),0) 
+                    && <button style={{marginTop:'50px'}}className="btn" onClick={()=>{
                     document.getElementById('novi-komentar').style.display='block'
                 }}>Dodaj komentar</button>}
                 <div id="novi-komentar">
