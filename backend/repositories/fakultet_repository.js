@@ -13,7 +13,7 @@ const getCollegeByName = async (CollegeName,info)=>{
     return results.rows
 };
 const insertCollege= async (info)=>{
-    const results = await pool.query('Insert into public."Fakultet" ("IDUniverziteta", "Ime","oblast") Values ($1,$2,$3)',[info.UniversityID,info.name, info.oblast])
+    const results = await pool.query('Insert into public."Fakultet" ("IDUniverziteta", "Ime",oblast) Values ($1,$2,$3)',[info.UniversityID,info.name, info.oblast])
     return results.rows
 };
 const getCollegeByOblast = async(oblast)=>{

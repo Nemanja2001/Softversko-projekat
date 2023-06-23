@@ -57,8 +57,8 @@ function Header(){
                     <div onClick={promjena_na_kontkt}>Kontakt</div>
                     {localStorage.getItem('admin')==='1' && <div onClick={promjena_na_admin}>Uredi stranicu</div>}
                 </div>
-                {!location.pathname.includes('korisnik') && <UlogujSe/>}
-                {location.pathname.includes('korisnik') && <UlogovanSam/>}
+                {!localStorage.getItem('token') && <UlogujSe/>}
+                {(location.pathname.includes('korisnik') || location.pathname.includes('admin')) && <UlogovanSam/>}
             </div>
 }
 
