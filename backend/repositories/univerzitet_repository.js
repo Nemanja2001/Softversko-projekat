@@ -19,8 +19,8 @@ const getUniversityByCountry = async (Country)=>{
 };
 
 const insertUniveristy = async (info)=>{
-    const resluts = await pool.query('Insert into public."Univerzitet" ("Ime", "Naziv_drzave") Values ($1,$2)',
-                            [info.ime, info.naziv_drzave]);
+    const resluts = await pool.query('Insert into public."Univerzitet" ("Ime", "Naziv_drzave","Opis","Slika") Values ($1,$2,$3,$4)',
+                            [info.ime, info.naziv_drzave, info.opis,info.slika]);
     return resluts.rows
 };
 
