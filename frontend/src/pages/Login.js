@@ -14,22 +14,16 @@ class Login extends React.Component{
         let data = {username:this.state.user, pass:this.state.pass}
         axios.post('http://localhost:3001/login/', data).then(
           response => {
-            console.log(response.data);
             if(response.data.token===null || !response.data){
                 window.alert('Login failed');
             }else {
-                //console.log(response.data)
-                //window.alert('Uspio login ');
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('username', response.data.id);
                 localStorage.setItem('admin', response.data.admin);
-                console.log(response.data);
-                //let {userID} = localStorage.getItem('token');
                 window.location = '/korisnik/'+localStorage.getItem('username');
             }
             }
-            ).catch(error=>console.error(error));
-        
+            ).catch(error=>console.error(error)); 
     }
 
     textChanged = (e)=>{
