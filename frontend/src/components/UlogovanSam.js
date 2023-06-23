@@ -12,7 +12,7 @@ class UlogovanSam extends React.Component{
     render(){
         //this.dobij_korisnika()
         return<div class="dropdown">
-        <button class="dropbtn">Prijavljeni ste</button>
+        <label style={{textDecoration:"underline"}} class="dropbtn">Prijavljeni ste</label>
         <div class="dropdown-content">
           <p onClick={this.onclick_fun}>Izloguj se</p>
         </div>
