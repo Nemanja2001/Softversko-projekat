@@ -52,6 +52,7 @@ function Header(){
                     <div onClick={promjena_na_univerziteti}>Univerziteti</div>
                     <div onClick={promjena_na_test_orijentacije} style={{textAlign:'center'}}>Test profesionalne orijentacije</div>
                     <div onClick={promjena_na_kontkt}>Kontakt</div>
+                    {localStorage.getItem('admin')==='1' && <div>Uredi stranicu</div>}
                 </div>
                 {!location.pathname.includes('korisnik') && <UlogujSe/>}
                 {location.pathname.includes('korisnik') && <UlogovanSam/>}

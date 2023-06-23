@@ -19,8 +19,10 @@ class Login extends React.Component{
                 window.alert('Login failed');
             }else {
                 //console.log(response.data)
-                localStorage.setItem('token', response.data);
+                localStorage.setItem('token', response.data.token);
                 localStorage.setItem('username', response.data.id);
+                localStorage.setItem('admin', response.data.admin);
+                console.log(response.data);
                 //let {userID} = localStorage.getItem('token');
                 window.alert('Uspio login ');
                 window.location = '/korisnik/'+localStorage.getItem('username');
