@@ -23,8 +23,7 @@ class Login extends React.Component{
                 window.location = '/korisnik/'+localStorage.getItem('username');
             }
             }
-            ).catch(error=>console.error(error));
-        
+            ).catch(error=>console.error(error)); 
     }
 
     textChanged = (e)=>{
