@@ -1,26 +1,26 @@
+.card-list{
+    display:flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    width:100%;
+}
 .card-container{
-    width:50%;
-    text-align:center
+
+    width:40%;
+    text-align:center;
 }
 
 .card-naziv{
     font-weight: bold;
     font-size: 22px;
 }
-
-.card-list{
-    display:flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    width:100%;
-}
-
-.card-naziv:hover{
-    color: red;
-    cursor: pointer;
-}
-
 .card-container:hover{
     cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.image-container img{
+    height:250px;
+    width:250px;
 }
