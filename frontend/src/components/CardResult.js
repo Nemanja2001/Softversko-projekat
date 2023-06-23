@@ -9,7 +9,7 @@ class Rezultat extends React.Component{
     render(){
         let {UniversityID, UniversityName, FacultyName} = this.state;
         return <> 
-        <div onClick={()=>{
+        <div id="predlozi" onClick={()=>{
             localStorage.setItem('UniversityID', UniversityID);
             localStorage.setItem('faculty',FacultyName);
             window.location='/korisnik/'+localStorage.getItem('username')+'/univerziteti/'+UniversityID+'/fakulteti/'+FacultyName+'/fakultetskejedinice';

@@ -7,6 +7,7 @@ import ListCardResults from "../components/ListCardResults"
 function RezultatiTesta(){
     return (<>
         <Header/>
+            
               <ListCardResults />
         <Footer/>   
         </>
