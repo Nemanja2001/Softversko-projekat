@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import CardCommentUniversity from "./CardComment";
+import './Komentari.css'
+
 class CardCommentList extends React.Component{
     constructor(props){
         super(props);
@@ -36,13 +38,14 @@ class CardCommentList extends React.Component{
         }
         const {komentari} = this.state
         return(
-            <div>
-                <div style={{display:"flex", justifyContent:"space-between"}}>
-                    <div style={{fontSize:'30px', fontWeight:'bold'}}>Rekli su o nama</div>
-                    {this.state.ulogovan && <button style={{width:'150px',backgroundColor:'white',color:'red',fontWeight:'bold', borderRadius:"5px"}}>Dodaj komentar</button>}
-                </div>
+            <div className="komentari">
+                <div style={{fontSize:'25px',fontStyle:'italic', fontWeight:'bold', marginBottom:'50px'}}>Rekli su o nama</div>
+                
                 {komentari.map((x)=>
                 <CardCommentUniversity ime={x.Name} prezime={x.Surname} tekst={x.Tekst} ocjena={x.Ocjena} />)}
+
+                {this.state.ulogovan && <button style={{marginTop:'50px'}}className="btn">Dodaj komentar</button>}
+
             </div>
         )
     }

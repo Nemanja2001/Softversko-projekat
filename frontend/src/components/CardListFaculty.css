@@ -1,16 +1,20 @@
 .div-flex-cards{
     display:flex;
     flex-wrap: wrap;
+    margin-bottom: 90px;
 }
 
 .fakulteti{
     width: 100%;
+    height:80px;
     align-self: center;
     text-align: center;
+    padding-top: 30px;
     font-weight: bold;
     font-size: 30px;
     font-style: italic;
-    background-color: beige;
+    background-color: #F7F3F5;
+    margin-bottom: 50px;
 }
 
 .kartice{
@@ -18,7 +22,10 @@
     text-align: center;
     line-height: 500%;
     font-weight: bold;
-    
+}
+.line{
+   
+    border-top: 2px dotted black;
 }
 
 .kartice:hover{

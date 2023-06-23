@@ -1,0 +1,7 @@
+.komentari{
+    display:flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}

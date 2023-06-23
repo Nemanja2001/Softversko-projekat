@@ -9,15 +9,14 @@ class CardCommentUniversity extends React.Component{
     render(){
         const {ime, prezime,text, ocjena} = this.state
         return(
-            <div>
-                <div>{ime} {prezime}</div>
-                <div style={{display:'flex'}}>
-                    <div style={{flex:'2',zIndex:'2', border:'2px solid red'}}>{text}</div>
-                    <div style={{flex:'1'}}>
+            <div style={{display:'flex', justifyItems:'space-around', paddingLeft:'40px' }}>
+                    <div style={{marginRight:'20px'}}>{ime} {prezime}:</div>
+                    <div style={{flex:'3',zIndex:'2', border:'1px solid #ef4d48',marginRight:'40px', paddingLeft:'20px'}}>{text}</div>
+                    <div style={{flex:'2'}}>
                         <div style={{alignSelf:'center'}}>Ocjena</div>
                         <div style={{alignSelf:'center'}}>{ocjena}</div>
                     </div>
-                </div>
+            
             </div>
         )
     }

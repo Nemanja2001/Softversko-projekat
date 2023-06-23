@@ -16,8 +16,11 @@ class Fakulteti extends React.Component{
         return (
             <div>
                 <Header />
-                    <CardListFaculty />
-                    <Komentari />
+                    <div style={{ marginBottom:'90px'}} >
+                        <CardListFaculty />
+                        <p className="line"></p>
+                        <Komentari />
+                    </div>
                 <Footer />
             </div>
         )

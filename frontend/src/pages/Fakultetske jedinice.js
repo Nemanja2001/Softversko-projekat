@@ -9,6 +9,7 @@ class FakultetskaJednicia extends React.Component{
             return <div>
                 <Header />
                 <CardListFacultyunit />
+                <p className="line"></p>
                 <Komentari />
                 <Footer />
             </div>
