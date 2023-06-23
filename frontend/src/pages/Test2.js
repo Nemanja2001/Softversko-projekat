@@ -41,170 +41,170 @@ function Test2(){
     function racunanjeTesta(){
         var forma = document.getElementById('anketa2');
         var radioGrupa = forma.getElementsByTagName('input');
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje1'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+(parseInt(radioGrupa[i].value,10))*2);
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje2'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje3'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+(parseInt(radioGrupa[i].value,10))*2);
             }
         }
-         for (var i = 0; i < radioGrupa.length; i++) {
+         for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje4'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje5'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+(parseInt(radioGrupa[i].value,10))*2);
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje6'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje7'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje8'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje9'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje10'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje11'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje12'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje13'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast1',parseInt(localStorage.getItem('oblast1'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje14'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje15'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje16'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje17'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje18'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje19'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje20'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje21'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast4',parseInt(localStorage.getItem('oblast4'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast2',parseInt(localStorage.getItem('oblast2'))+parseInt(radioGrupa[i].value,10));
                 localStorage.setItem('oblast3',parseInt(localStorage.getItem('oblast3'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje22'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje23'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje24'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje25'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje26'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje27'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje28'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast6',parseInt(localStorage.getItem('oblast6'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje29'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast5',parseInt(localStorage.getItem('oblast5'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje30'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
             }
         }
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
             if (radioGrupa[i].type === 'radio' && radioGrupa[i].name === 'pitanje31'&& radioGrupa[i].checked === true) {
                 localStorage.setItem('oblast7',parseInt(localStorage.getItem('oblast7'))+parseInt(radioGrupa[i].value,10));
             }
@@ -219,7 +219,7 @@ function Test2(){
         var radioGrupa = forma.getElementsByTagName('input');
         var oznaceni=0;
       
-        for (var i = 0; i < radioGrupa.length; i++) {
+        for (let i = 0; i < radioGrupa.length; i++) {
           if (radioGrupa[i].type === 'radio' && radioGrupa[i].checked === true) {
             oznaceni++;
             }
