@@ -1,0 +1,16 @@
+#uredjivanje{
+    display:flex;
+    justify-content:space-around;
+    padding-left: 180px;
+    padding-right: 30px;
+    height:auto;
+    margin-bottom: 100px;
+    margin-top: 70px;
+}
+.izmjena{
+    flex:1;
+}
+
+.izmjena > form{
+    flex-direction: column;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from "axios";
+import './Admin.css'
 class Admin extends React.Component{
     constructor(props){
         super(props);
@@ -39,10 +40,10 @@ class Admin extends React.Component{
             <div>
                 <Header/>
                 
-                <div style={{display:"flex", justifyContent:"space-evenly"}}>
-                    <div id='univerzitet' style={{flex:'1'}}>
-                        <form style={{flexDirection:"column"}}>
-                            <label>Ime Univerziteta</label>
+                <div id="uredjivanje">
+                    <div className='izmjena'>
+                        <form>
+                            <label>Ime Univerziteta:</label>
                             <br/>
                             <input type="text"></input>
                             <br/>
@@ -60,11 +61,11 @@ class Admin extends React.Component{
                             <br/>
                             <input type="text"></input>
                             <br/>
-                            <button>Dodaj univerzitet</button>
+                            <button class="btn" style={{marginTop:'30px'}}>Dodaj univerzitet</button>
                         </form>
                     </div>
-                    <div id='fakultet' style={{flex:'1'}}>
-                        <form style={{flexDirection:"column"}}>
+                    <div className="izmjena">
+                        <form>
                             <label>Ime Univerziteta</label>
                             <br/>
                             <select>
@@ -87,11 +88,11 @@ class Admin extends React.Component{
                                 <option>oblast 7</option>
                             </select>
                             <br/>
-                            <button>Dodaj fakultet</button>
+                            <button class="btn" style={{marginTop:'30px'}}>Dodaj fakultet</button>
                         </form>
                     </div>
-                    <div id='fakultetskajedinica' style={{flex:'1'}}>
-                        <form style={{flexDirection:"column"}}>
+                    <div className="izmjena">
+                        <form>
                             <label>Ime Univerziteta</label>
                             <br/>
                             <select onChange={this.uzmi_fakultet}>
@@ -118,9 +119,9 @@ class Admin extends React.Component{
                             <br/>
                             <label>Unesite URL za sliku fakultetske jedinice</label>
                             <br/>
-                            <input type="text"></input>
+                            <input style={{width:'auto', height:'auto'}}type="text"></input>
                             <br/>
-                            <button>Dodaj fakultetsku jedinicu</button>
+                            <button class="btn" style={{width:'auto', marginTop:'30px'}}>Dodaj fakultetsku jedinicu</button>
                         </form>
                     </div>
                 </div>
