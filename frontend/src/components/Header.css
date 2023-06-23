@@ -20,12 +20,9 @@
 
 #div-flex div:hover{
     cursor: pointer;
-}
-
-#div-flex div:hover{
     color: red;
+    text-decoration: 3px solid red;
 }
-
 #logovanje{
     display: flex;
     flex: 1;
@@ -37,13 +34,21 @@
 
 #logovanje div{
     background-color: white;
-    color: red;
+    color: #ef4d48;
+    width:45px;
+    height:31px;
+    text-align: center;
+    border-radius: 5px;
+    
+
 }
 
 #logovanje div:hover{
     cursor: pointer;
-    background-color: red;
-    color: white;
+    background-color: #F7F3F5;
+    color: #ef4d48;
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 #logo{
    margin-left: 10px;
