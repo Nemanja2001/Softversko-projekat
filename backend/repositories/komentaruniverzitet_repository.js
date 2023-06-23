@@ -11,7 +11,6 @@ const getCommentByUniversity = async (UniversityID)=>{
 }
 
 const insertComment = async (info)=>{
-    console.log(info)
     const resluts = await pool.query('Insert into public."KomentarUniverzitet" ("IDUniverziteta","IDKorisnika", "Tekst", "Ocjena") Values($1, $2, $3, $4)'
                                     ,[info.UniversityID,info.UserID,info.Text, info.Ocjena]);
     return resluts.rows
