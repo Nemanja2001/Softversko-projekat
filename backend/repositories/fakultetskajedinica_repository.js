@@ -13,8 +13,8 @@ const getFacultyUnitsByUniversity = async (UniversityID)=>{
 }
 
 const insertFacultyUnit = async (info)=>{
-    const results = await pool.query('Insert into public."FakultetskaJedinica" ("IDUniverzitet", "ImeFakulteta", "Ime","URL","Opis","Slika") Values($1, $2, $3)',
-                            [info.UniversityID,info.FacultyName,info.Name])
+    const results = await pool.query('Insert into public."FakultetskaJedinica" ("IDUniverzitet", "ImeFakulteta", "Ime","URL","Opis","Slika") Values($1, $2, $3, $4, $5, $6)',
+                            [info.UniversityID,info.FacultyName,info.Name, info.URL,info.Opis, info.Slika])
     return results.rows 
 }
 
