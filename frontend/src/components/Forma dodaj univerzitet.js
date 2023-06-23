@@ -25,7 +25,7 @@ class DodajUniverzitet extends React.Component{
             <label>Izaberite državu</label>
             <br/>
             <select onChange={(e)=>this.setState({drzava:e.target.value})}>
-                <option>Izaberite drzavu u kojoj se nalazi Univerzitet..</option>
+                <option>Izaberite drzavu u kojoj se nalazi Univerzitet...</option>
                 {this.state.drzave.map(x=><option value={x.Ime}>{x.Ime}</option>)}
             </select>
             <br/>

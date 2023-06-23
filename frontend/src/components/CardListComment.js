@@ -2,11 +2,11 @@ import React from "react";
 import axios from "axios";
 import CardCommentUniversity from "./CardComment";
 import './Komentari.css'
-
+import RatingStar from "./RatingStar";
 class CardCommentList extends React.Component{
     constructor(props){
         super(props);
-        this.state={komentari:[],ulogovan:props.ulogovan};
+        this.state={komentari:[],ulogovan:props.ulogovan, tekst:'', ocjena:''};
     }
 
     dobij_komentare_univerziteti(){
@@ -28,6 +28,11 @@ class CardCommentList extends React.Component{
         )
         .catch(error=>console.error(error))
     }
+
+    handleStarClick(star){
+        this.setState({ocjena:star})
+    }
+
     render(){
         if(localStorage.getItem('facultyunit')){
 
@@ -44,7 +49,52 @@ class CardCommentList extends React.Component{
                 {komentari.map((x)=>
                 <CardCommentUniversity ime={x.Name} prezime={x.Surname} tekst={x.Tekst} ocjena={x.Ocjena} />)}
 
-                {this.state.ulogovan && <button style={{marginTop:'50px'}}className="btn">Dodaj komentar</button>}
+                {this.state.ulogovan && <button style={{marginTop:'50px'}}className="btn" onClick={()=>{
+                    document.getElementById('novi-komentar').style.display='block'
+                }}>Dodaj komentar</button>}
+                <div id="novi-komentar">
+                        <div>
+                            <div>
+                                <label htmlFor="tekst-komentara">Unesite tekst Vašeg komenara</label>
+                                <br/>
+                                <input id='tekst-komentara' value={this.state.tekst} type="text" onChange={(e)=>{
+                                    this.setState({tekst:e.target.value})
+                                }}></input>
+                                <br/>
+                            </div>
+                            <div>
+                                <label>Ocijenite fakultet</label>
+                                <br/>
+                                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((star) => (
+                                    <RatingStar
+                                    key={star}
+                                    filled={star <= this.state.ocjena}
+                                    onClick={() => this.handleStarClick(star)}
+                                    />
+                                ))}
+                            </div>    
+                        </div>
+                        <br/>
+                        <button className='btn' type="submit" value="Objavi komentar" onClick={()=>{
+                        let data = {
+                            UniversityID:localStorage.getItem('UniversityID'),
+                            CollegeName:localStorage.getItem('faculty'),
+                            UserID:localStorage.getItem('username'),
+                            Text:this.state.tekst,
+                            Ocjena: this.state.ocjena
+                        }
+                        alert('Univerzitet '+ localStorage.getItem('UniversityID') + ' Fakultet ' + localStorage.getItem('faculty'))
+                        if(!localStorage.getItem('faculty')){
+                            axios.post('http://localhost:3001/universitycomments', data)
+                                .then(response=>alert('Unešen komentar'))
+                                .catch(error=>alert('Greška'))
+                        }else{
+                            axios.post('http://localhost:3001/facultycomments', data)
+                                .then(response=>alert('Unešen komentar'))
+                                .catch(error=>alert('Greška'))
+                        }
+                    }}></button>
+                </div>
 
             </div>
         )

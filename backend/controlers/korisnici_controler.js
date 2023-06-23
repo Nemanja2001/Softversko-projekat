@@ -43,7 +43,6 @@ const login = async(request, response)=>{
     if (typeof result[0] === 'undefined') {
         console.log("Ovdje sam")
         returnValue.msg = "Incorrect email/password";
-        response.send(returnValue);
         return;
     }
 
@@ -51,7 +50,6 @@ const login = async(request, response)=>{
         Surname: result[0].Surname, isAdmin: result[0].Type};
         returnValue.id = toSend.userID;
         returnValue.admin = toSend.isAdmin;
-        console.log(returnValue.admin)
     jwt.sign(toSend, 'SECRET', (err, token) => {
         returnValue.token = token;
         response.send(returnValue);

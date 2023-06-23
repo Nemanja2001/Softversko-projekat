@@ -5,3 +5,14 @@
     margin-bottom: 50px;
     margin-left: 50px;
 }
+
+
+#tekst-komentara{
+    width: 60%;
+    border-radius: 10px;
+}
+
+#novi-komentar{
+    display: none;
+    width: 60%;
+}

@@ -46,6 +46,7 @@ class DodajFakultet extends React.Component{
                     <select onClick={(e)=>{
                         this.setState({univerzitetID:e.target.value})
                         console.log(this.state)}}>
+                            <option>Izaberite Univerzitet</option>
                         {this.state.univerziteti.map(x=><option value={x.ID}>{x.Ime}</option>)}
                     </select>
                     <br/>
