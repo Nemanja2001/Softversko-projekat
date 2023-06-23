@@ -43,6 +43,9 @@ function Header(){
             window.location='/korisnik/'+localStorage.getItem('username')+'/kontakt'
     }
     
+    function promjena_na_admin(){
+        window.location='/admin';
+    }
 
     return <div className="flex-conatiner">
                 <div><img id="logo" src={logo} alt="Ovjde treba da bude logo" ></img></div>
@@ -52,7 +55,7 @@ function Header(){
                     <div onClick={promjena_na_univerziteti}>Univerziteti</div>
                     <div onClick={promjena_na_test_orijentacije} style={{textAlign:'center'}}>Test profesionalne orijentacije</div>
                     <div onClick={promjena_na_kontkt}>Kontakt</div>
-                    {localStorage.getItem('admin')==='1' && <div>Uredi stranicu</div>}
+                    {localStorage.getItem('admin')==='1' && <div onClick={promjena_na_admin}>Uredi stranicu</div>}
                 </div>
                 {!location.pathname.includes('korisnik') && <UlogujSe/>}
                 {location.pathname.includes('korisnik') && <UlogovanSam/>}

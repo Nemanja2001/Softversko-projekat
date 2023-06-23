@@ -13,6 +13,7 @@ import Fakulteti from './pages/Fakulteti';
 import FakultetskaJednicia from './pages/Fakultetske jedinice';
 import TestOrijentacijePocetna from './pages/TestOrijentacijePocetna';
 import RezultatiTesta from './pages/RezultatiTesta'
+import Admin from './pages/Admin';
 function App() {
   //let location = useLocation()
   return (
@@ -37,6 +38,8 @@ function App() {
           {localStorage.getItem('token') && <Route path='/korisnik/:userID/univerziteti/:uniID/fakulteti' Component={Fakulteti}></Route>}
           <Route path='/univerziteti/:uniID/fakulteti/:facultyName/fakultetskejedinice' Component={FakultetskaJednicia}></Route>
           {localStorage.getItem('token') && <Route path='/korisnik/:userID/univerziteti/:uniID/fakulteti/:facultyName/fakultetskejedinice' Component={FakultetskaJednicia}></Route>}
+          {localStorage.getItem('token') && <Route path='/admin' Component={Admin}></Route>}
+          
       </Routes>
     </Router>
     </>
