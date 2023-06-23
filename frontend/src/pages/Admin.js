@@ -3,20 +3,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from "axios";
 import './Admin.css'
+import DodajUniverzitet from "../components/Forma dodaj univerzitet";
 class Admin extends React.Component{
     constructor(props){
         super(props);
-        this.state={drzave:[], univerziteti:[], fakulteti:[], univerzitetID:''};
+        this.state={univerziteti:[], fakulteti:[], univerzitetID:''};
     }
-
-    uzmi_drzave(){
-        axios.get('http://localhost:3001/country/')
-        .then(
-            response=>this.setState({drzave:response.data})
-        )
-        .catch(error=>console.error(error))
-    }
-
+    
     uzmi_univerzitete(){
         axios.get('http://localhost:3001/universities/')
         .then(
@@ -34,36 +27,13 @@ class Admin extends React.Component{
     }
 
     render(){
-        this.uzmi_drzave();
         this.uzmi_univerzitete();
-        return<>
+        return <>
             <div>
                 <Header/>
                 
                 <div id="uredjivanje">
-                    <div className='izmjena'>
-                        <form>
-                            <label>Ime Univerziteta:</label>
-                            <br/>
-                            <input type="text"></input>
-                            <br/>
-                            <label>Izaberite državu</label>
-                            <br/>
-                            <select>
-                                {this.state.drzave.map(x=><option>{x.Ime}</option>)}
-                            </select>
-                            <br/>
-                            <label>Unesite opis fakulteta</label>
-                            <br/>
-                            <input type="text"></input>
-                            <br/>
-                            <label>Unesite URL fotografije koju želite da imate na svom Univerzitetu</label>
-                            <br/>
-                            <input type="text"></input>
-                            <br/>
-                            <button class="btn" style={{marginTop:'30px'}}>Dodaj univerzitet</button>
-                        </form>
-                    </div>
+                    <DodajUniverzitet/>
                     <div className="izmjena">
                         <form>
                             <label>Ime Univerziteta</label>
