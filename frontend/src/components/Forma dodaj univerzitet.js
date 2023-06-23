@@ -40,14 +40,15 @@ class DodajUniverzitet extends React.Component{
             <button class="btn" style={{marginTop:'30px'}} onClick={()=>{
                 let data = {ime:this.state.ime, naziv_drzave:this.state.drzava, opis:this.state.opis, slika:this.state.slika}
                 axios.post('http://localhost:3001/universities/',data)
-                .then(response=>{
-                    if(!response.data || response===null){
-                        alert('Greska');
-                    }else{
-                        alert('Proslo');
-                    }
-                })
-                .catch(error=>alert('Greska'))
+                    .then(response=>{
+                        if(!response.data || response===null){
+                            alert('Greska');
+                        }else{
+                            alert('Proslo');
+                        }
+                    })
+                    .catch(error=>alert('Greska'))
+                    .finally(alert("Proslo"));
             }}>Dodaj Univerzitet</button>
         </form>
     </div>
