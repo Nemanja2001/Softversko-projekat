@@ -20,11 +20,12 @@ class Admin extends React.Component{
         return<>
             <div>
                 <Header/>
-                <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} onClick={()=>{
-                    document.getElementById('forma-univerzitet').style.display='flex'
-                }}> 
+                <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}} > 
                     <div style={{display:"flex"}}>
-                        <button>Dodaj novi Univerzitet</button>
+                    <button onClick={()=>{
+                        document.getElementById('forma-univerzitet').style.display='flex'
+                    }}>
+                    Dodaj novi Univerzitet</button>
                     </div> 
                     <div>
                         <button>Dodaj novi fakultet</button>
