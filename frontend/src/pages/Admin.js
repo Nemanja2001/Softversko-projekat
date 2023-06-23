@@ -5,7 +5,7 @@ import axios from "axios";
 class Admin extends React.Component{
     constructor(props){
         super(props);
-        this.state={drzave:[], univerziteti:[]};
+        this.state={drzave:[], univerziteti:[],fakulteti:[], univerzitetID:''};
     }
 
     uzmi_drzave(){
@@ -24,6 +24,14 @@ class Admin extends React.Component{
         .catch(error=>console.error(error))
     }
 
+    uzmi_fakultet(){
+        axios.get('http://localhost:3001/faculty/university/'+this.state.univerzitetID)
+        .then(
+            response=>this.setState({fakulteti:response.data})
+        )
+        .catch(error=>console.error(error))
+    }
+
     render(){
         this.uzmi_drzave();
         this.uzmi_univerzitete();
@@ -31,8 +39,8 @@ class Admin extends React.Component{
             <div>
                 <Header/>
                 
-                <div style={{display:"flex", justifyContent:"space-between"}}>
-                    <div id='univerzitet'>
+                <div style={{display:"flex", justifyContent:"space-evenly"}}>
+                    <div id='univerzitet' style={{flex:'1'}}>
                         <form style={{flexDirection:"column"}}>
                             <label>Ime Univerziteta</label>
                             <br/>
@@ -55,7 +63,7 @@ class Admin extends React.Component{
                             <button>Dodaj univerzitet</button>
                         </form>
                     </div>
-                    <div id='fakultet'>
+                    <div id='fakultet' style={{flex:'1'}}>
                         <form style={{flexDirection:"column"}}>
                             <label>Ime Univerziteta</label>
                             <br/>
@@ -82,31 +90,37 @@ class Admin extends React.Component{
                             <button>Dodaj fakultet</button>
                         </form>
                     </div>
-                    <div id='fakultetskajedinica'>
+                    <div id='fakultetskajedinica' style={{flex:'1'}}>
                         <form style={{flexDirection:"column"}}>
                             <label>Ime Univerziteta</label>
                             <br/>
-                            <select>
+                            <select onChange={this.uzmi_fakultet}>
                                 {this.state.univerziteti.map(x=><option>{x.Ime}</option>)}
                             </select>
                             <br/>
                             <label>Ime fakulteta</label>
                             <br/>
-                            <input type="text"></input>
-                            <br/>
-                            <label>Izaberi oblast kojoj pripada fakultet</label>
-                            <br/>
                             <select>
-                                <option>oblast 1</option>
-                                <option>oblast 2</option>
-                                <option>oblast 3</option>
-                                <option>oblast 4</option>
-                                <option>oblast 5</option>
-                                <option>oblast 6</option>
-                                <option>oblast 7</option>
+                                {this.state.fakulteti.map(x=><option>{x.Ime}</option>)}
                             </select>
                             <br/>
-                            <button>Dodaj fakultet</button>
+                            <label>Ime fakultetske jedinice</label>
+                            <br/>
+                            <input type="text"></input>
+                            <br/>
+                            <label>Unesi URL prema fakultetskoj jedinici</label>
+                            <br/>
+                            <input type="text"></input>
+                            <br/>
+                            <label>Unesite opis fakultetske jedinice</label>
+                            <br/>
+                            <input type="text"></input>
+                            <br/>
+                            <label>Unesite URL za sliku fakultetske jedinice</label>
+                            <br/>
+                            <input type="text"></input>
+                            <br/>
+                            <button>Dodaj fakultetsku jedinicu</button>
                         </form>
                     </div>
                 </div>
