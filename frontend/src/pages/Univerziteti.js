@@ -10,13 +10,15 @@ class Univerziteti extends React.Component{
     if(localStorage.getItem('UniversityID')){
       localStorage.removeItem('UniversityID')
     }
-    return (<div>
-      <Header/>
-      <div className="app">
-        <h1 style={{textAlign:'center'}}>Univerziteti</h1>
-        <CardList />
-      </div>
-      <Footer/>
+    return (
+      <div>
+        <Header/>
+        
+        <div style={{ marginBottom:'90px'}} className="app" >
+          <h1 style={{textAlign:'center', marginBottom:'90px'}}>Univerziteti</h1>
+          <CardList />
+        </div>
+        <Footer />
       </div>
     );
   }
