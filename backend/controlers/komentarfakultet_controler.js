@@ -7,7 +7,9 @@ const getCommentByUserID = async(request, response)=>{
 }
 
 const getCommentsByCollege = async(request, response)=>{
-    const results = await comementfacultyfunctions.getCommentsByCollege(request.body)
+    const encodedData = request.query.data;
+    const decodedData = JSON.parse(decodeURIComponent(encodedData));
+    const results = await comementfacultyfunctions.getCommentsByCollege(decodedData)
     response.send(results)
 }
 
