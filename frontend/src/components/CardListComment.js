@@ -20,13 +20,15 @@ class CardCommentList extends React.Component{
     }
     dobij_komentare_fakultet(){
         let data = {UniversityID: localStorage.getItem('UniversityID'), CollegeName:localStorage.getItem('faculty')};
-        axios.get('http://localhost:3001/facultycomments',data)
-        .then(
-            response=>{
-                this.setState({komentari:response.data});
-            }
-        )
-        .catch(error=>console.error(error))
+        const encodedData = encodeURIComponent(JSON.stringify(data));
+        axios.get(`http://localhost:3001/facultycomments?data=${encodedData}`)
+            .then(
+                response=>{
+                    console.log(response.data)
+                    this.setState({komentari:response.data});
+                }
+            )
+            .catch(error=>console.error(error))
     }
 
     handleStarClick(star){
@@ -46,7 +48,11 @@ class CardCommentList extends React.Component{
             <div className="komentari">
                 <div style={{fontSize:'25px',fontStyle:'italic', fontWeight:'bold', marginBottom:'50px'}}>Rekli su o nama</div>
                 
-                {komentari.map((x)=>
+                {!localStorage.getItem('faculty') && komentari.map((x)=>
+                <CardCommentUniversity ime={x.Name} prezime={x.Surname} tekst={x.Tekst} ocjena={x.Ocjena} />)}
+
+                
+                {localStorage.getItem('faculty') && komentari.map((x)=>
                 <CardCommentUniversity ime={x.Name} prezime={x.Surname} tekst={x.Tekst} ocjena={x.Ocjena} />)}
 
                 {this.state.ulogovan && !this.state.komentari.map(x=>x.IDKorisnika).includes(parseInt(localStorage.getItem('username'),10),0) 
@@ -84,7 +90,6 @@ class CardCommentList extends React.Component{
                             Text:this.state.tekst,
                             Ocjena: this.state.ocjena
                         }
-                        alert('Univerzitet '+ localStorage.getItem('UniversityID') + ' Fakultet ' + localStorage.getItem('faculty'))
                         if(!localStorage.getItem('faculty')){
                             axios.post('http://localhost:3001/universitycomments', data)
                                 .then(response=>alert('Unešen komentar'))

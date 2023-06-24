@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import axios from "axios";
 import './Admin.css'
 import DodajUniverzitet from "../components/Forma dodaj univerzitet";
 import DodajFakultet from "../components/Forma dodaj fakultet";

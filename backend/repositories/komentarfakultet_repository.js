@@ -8,8 +8,9 @@ const getCommentByUserID = async (UserID) => {
   return results.rows;
 };
 const getCommentsByCollege = async (info) => {
+  
   const results = await pool.query(
-    'SELECT * FROM public."KomentarFakultet" where "IDUniverziteta" = $1 and "ImeFakulteta"=$2',
+    'SELECT * FROM public."KomentarFakultet" inner join public."Korisnici" on "KomentarFakultet"."IDKorisnika"="Korisnici"."ID" where "IDUniverziteta" = $1 and "ImeFakulteta"=$2',
     [info.UniversityID, info.CollegeName]
   );
   return results.rows;
