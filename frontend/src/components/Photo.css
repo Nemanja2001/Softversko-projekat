@@ -1,34 +1,38 @@
-#slika1{
-    width: 100%;
-     height: 100%;
-    z-index: -1;
+#slika1 {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #div1 {
-    position: relative;
-    z-index: 1;
-    height: 800px;
- }
- 
+  position: relative;
+  z-index: 1;
+  height: 700px;
+}
+
 #div2 {
-    position: absolute;
-    top: 800px;
-    left: 50px;
-    z-index: 2;
-    color: white;
+  position: absolute;
+  top: 580px;
+  left: 60px;
+  z-index: 2;
+  color: white;
 }
 
-#btn{
-    line-height: 40px;
-    width: 150px;
-    background-color:white;
-    font-weight: bold;
-    color: crimson;
-    border-radius: 10px;
+#btn {
+  line-height: 40px;
+  width: 150px;
+  background-color: white;
+  font-weight: bold;
+  color: crimson;
+  border-radius: 10px;
 }
 
-#btn:hover{
-    cursor: pointer;
-    background-color: red;
-    color: white;
+#btn:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
+#Naslov1 {
+  font-size: 4rem;
+  font-family: "Vollkorn", serif;
 }

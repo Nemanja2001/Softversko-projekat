@@ -1,18 +1,19 @@
-#paragraph1{
-    font-weight: bold;
-    font-size: 40px;
+#paragraph1 {
+  font-weight: bold;
+  font-size: 40px;
 }
 
-#div{
-    margin-left: 120px;
+#div {
+  margin-left: 120px;
 }
 
-#div3-flex{
-    display: flex;
+#div3-flex {
+  display: flex;
+  font-family: cursive, "Times New Roman", serif;
 }
 
-#div3-flex>div{
-    flex: 1;
-    white-space: pre-line;
-    font-size: 20px;
+#div3-flex > div {
+  flex: 1;
+  white-space: pre-line;
+  font-size: 19px;
 }
