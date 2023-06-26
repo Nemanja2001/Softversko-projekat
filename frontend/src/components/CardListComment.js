@@ -91,14 +91,18 @@ class CardCommentList extends React.Component{
                         }
                         if(!localStorage.getItem('faculty')){
                             axios.post('http://localhost:3001/universitycomments', data)
-                                .then(response=>alert('Unešen komentar'))
+                                .then(response=>{alert('Uspješno ste unijeli komentar!')
+                                document.getElementById('novi-komentar').style.display='none'
+                            })
                                 .catch(error=>alert('Greška'))
                         }else{
                             axios.post('http://localhost:3001/facultycomments', data)
-                                .then(response=>alert('Unešen komentar'))
+                                .then(response=>{alert('Uspješno ste unijeli komentar!')
+                                document.getElementById('novi-komentar').style.display='none'
+                            })
                                 .catch(error=>alert('Greška'))
                         }
-                    }}></button>
+                    }}> Objavi komentar</button>
                 </div>
 
             </div>
