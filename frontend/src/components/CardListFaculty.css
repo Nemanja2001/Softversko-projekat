@@ -1,34 +1,54 @@
-.div-flex-cards{
-    display:flex;
-    flex-wrap: wrap;
-    margin-bottom: 90px;
+.div-flex-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+  justify-content: space-around;
 }
 
-.fakulteti{
-    width: 100%;
-    height:80px;
-    align-self: center;
-    text-align: center;
-    padding-top: 30px;
-    font-weight: bold;
-    font-size: 30px;
-    font-style: italic;
-    background-color: #F7F3F5;
-    margin-bottom: 50px;
+.fakulteti {
+  width: 100%;
+  height: 80px;
+  align-self: center;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  font-style: italic;
+  background-color: #f7f3f5;
+  margin-bottom: 50px;
 }
 
-.kartice{
-    width: 50%;
-    text-align: center;
-    line-height: 500%;
-    font-weight: bold;
+.kartice {
+  width: 50%;
+  text-align: center;
+  line-height: 500%;
+  font-weight: bold;
 }
-.line{
-   
-    border-top: 2px dotted black;
+.line {
+  border-top: 2px dotted black;
 }
 
-.kartice:hover{
-    color: red;
-    cursor: pointer;
+.kartice:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.card {
+  margin-bottom: 10px;
+  width: 40%;
+  text-align: center;
+  line-height: 500%;
+  font-weight: bold;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(15px);
+}
+
+.card:hover {
+  color: red;
+  cursor: pointer;
 }
