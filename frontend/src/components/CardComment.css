@@ -1,0 +1,34 @@
+.card-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ef4d48;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .comment-text {
+    flex: 1;
+  }
+  
+  .comment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ocjena-label {
+    font-size: 14px;
+  }
+  
+  .ocjena-value {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

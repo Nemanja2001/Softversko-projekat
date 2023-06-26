@@ -1,25 +1,31 @@
 import React from "react";
+import './CardComment.css'
+class CardCommentUniversity extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ime: props.ime,
+      prezime: props.prezime,
+      text: props.tekst,
+      ocjena: props.ocjena
+    };
+  }
 
-class CardCommentUniversity extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={ime:props.ime, prezime:props.prezime, text:props.tekst, ocjena:props.ocjena}
-    }
-
-    render(){
-        const {ime, prezime,text, ocjena} = this.state
-        return(
-            <div style={{display:'flex', justifyItems:'space-around', paddingLeft:'40px' }}>
-                    <div style={{marginRight:'20px'}}>{ime} {prezime}:</div>
-                    <div style={{flex:'3',zIndex:'2', border:'1px solid #ef4d48',marginRight:'40px', paddingLeft:'20px'}}>{text}</div>
-                    <div style={{flex:'2'}}>
-                        <div style={{alignSelf:'center'}}>Ocjena</div>
-                        <div style={{alignSelf:'center'}}>{ocjena}</div>
-                    </div>
-            
-            </div>
-        )
-    }
+  render() {
+    const { ime, prezime, text, ocjena } = this.state;
+    return (
+      <div className="card-comment">
+        <div className="comment-header">
+          {ime} {prezime}:
+        </div>
+        <div className="comment-text">{text}</div>
+        <div className="comment-footer">
+          <div className="ocjena-label">Ocjena</div>
+          <div className="ocjena-value">{ocjena}</div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default CardCommentUniversity
+export default CardCommentUniversity;
