@@ -4,7 +4,7 @@ import "./CardListFaculty.css";
 class CardFacultyunit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { ime: props.ime };
+    this.state = { ime: props.ime, url:props.URL };
   }
 
   render() {
@@ -12,17 +12,8 @@ class CardFacultyunit extends React.Component {
     return (
       <div
         className="card"
-        onClick={() =>
-          (window.location =
-            "/univerziteti/" +
-            localStorage.getItem("UniversityID") +
-            "/fakulteti/" +
-            localStorage.getItem("faculty") +
-            "/fakultetskejedinice/" +
-            ime)
-        }
       >
-        {ime}
+        <a href={this.state.url} target="_blank">{ime}</a>
       </div>
     );
   }

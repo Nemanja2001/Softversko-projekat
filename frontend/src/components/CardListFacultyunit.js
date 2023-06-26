@@ -22,6 +22,7 @@ class CardListFacultyunit extends React.Component {
           window.alert("Greška pri preuzimanju fakultetskih jedinica");
         } else {
           this.setState({ rezultati: response.data });
+          console.log(response.data);
         }
       })
       .catch((error) => console.log(error));
@@ -34,7 +35,7 @@ class CardListFacultyunit extends React.Component {
       <div className="div-flex-cards">
         <div className="fakulteti">Fakultetske jedinice</div>
         {rezultati.map((x) => (
-          <CardFacultyunit ime={x.Ime} />
+          <CardFacultyunit ime={x.Ime} URL={x.URL} />
         ))}
       </div>
     );

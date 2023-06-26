@@ -24,7 +24,6 @@ class CardCommentList extends React.Component{
         axios.get(`http://localhost:3001/facultycomments?data=${encodedData}`)
             .then(
                 response=>{
-                    console.log(response.data)
                     this.setState({komentari:response.data});
                 }
             )
