@@ -1,6 +1,7 @@
 import React from "react";
 import "./Text.css";
 import video from "./../photos/video.mp4";
+import Citat from "./Citat";
 import slika from "./../photos/DrNemanjaPrvi.jpg";
 function Text() {
   const predifinedtext = "Korak više u \n daljem obrazovanju";
@@ -10,20 +11,34 @@ function Text() {
     "Našu platformu vidimo kao jedan od načina da  srednjoškolci\n starijih razreda na vrijeme upoznaju mogućnosti na našim\n fakultetima u državi, da vide kakva su iskustva ljudi sa njihovog\n željenog fakulteta i da mogu da postave određeno pitanje na koje \nostali mogu da vide odgovor, ako imaju istu ili sličnu nedoumicu.";
 
   return (
-    <div id="div">
+    <div>
+      <div id="div">
+        <div>
+          <p id="paragraph1" style={{ whiteSpace: "pre-line" }}>
+            {predifinedtext}
+          </p>
+        </div>
+        <div id="div3-flex">
+          <div>{text1}</div>
+          <div>{text2}</div>
+        </div>
+      </div>
+      <br />
       <div>
-        <p id="paragraph1" style={{ whiteSpace: "pre-line" }}>
-          {predifinedtext}
-        </p>
+        <Citat />
+
+        <div>
+          <br />
+          <video
+            src={video}
+            controls
+            poster={slika}
+            style={{ marginLeft: "120px" }}
+          ></video>
+          <br />
+          <br />
+        </div>
       </div>
-      <div id="div3-flex">
-        <div>{text1}</div>
-        <div>{text2}</div>
-      </div>
-      <br />
-      <video src={video} controls poster={slika}></video>
-      <br />
-      <br />
     </div>
   );
 }
