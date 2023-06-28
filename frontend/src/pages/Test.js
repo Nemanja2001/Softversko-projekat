@@ -146,7 +146,7 @@ function Test(){
             <div class="oTestu">
                 <p>               
                 <br/>            
-                Vaš zadatak je da procenite u kojoj mjeri volite navedene aktivnosti, odnosno koliko se na Vas odnose navedene tvrdnje na skali od 1 do 4. “1” je najniža ocjena, a “4” je najviša. Na kraju testa, dobićete informaciju koja profesionalna oblast Vam najviše odgovara i ponude za različite fakultete iz te oblasti koji bi Vas mogli zanimati.
+                Vaš zadatak je da procijenite u kojoj mjeri volite navedene aktivnosti, odnosno koliko se na Vas odnose navedene tvrdnje na skali od 1 do 4. “1” je najniža ocjena, a “4” je najviša. Na kraju testa, dobićete informaciju koja profesionalna oblast Vam najviše odgovara i ponude za različite fakultete iz te oblasti koji bi Vas mogli zanimati.
                 </p>
             </div>
             
