@@ -21,7 +21,7 @@ class Register extends React.Component{
                 window.alert('Neuspjesna registracija');
             else {
                 window.alert('Uspjesna registracija');
-                window.location='/login/';
+                window.location='/login';
             }
             }
             ).catch(error=>console.error(error));
